@@ -23,7 +23,7 @@ U 1 1 5F7E7F39
 P 4600 3750
 F 0 "U1" H 4600 4117 50  0000 C CNN
 F 1 "LM2576T-5" H 4600 4026 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-5_P3.4x3.7mm_StaggerEven_Lead3.8mm_Vertical" H 4600 3500 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-5_P3.4x3.8mm_StaggerEven_Lead7.13mm_TabDown" H 4600 3500 50  0001 L CIN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2576.pdf" H 4600 3750 50  0001 C CNN
 	1    4600 3750
 	1    0    0    -1  
@@ -127,7 +127,7 @@ L Device:R R2
 U 1 1 5F7F5E49
 P 8250 4000
 F 0 "R2" V 8457 4000 50  0000 C CNN
-F 1 "330R" V 8366 4000 50  0000 C CNN
+F 1 "200R" V 8366 4000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8180 4000 50  0001 C CNN
 F 3 "~" H 8250 4000 50  0001 C CNN
 	1    8250 4000
@@ -144,8 +144,6 @@ F 3 "~" H 7900 4000 50  0001 C CNN
 	1    7900 4000
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	7250 4250 8450 4250
 Wire Wire Line
 	8450 3650 8450 4000
 Wire Wire Line
@@ -165,7 +163,7 @@ L Device:R R1
 U 1 1 5F81F757
 P 5750 3650
 F 0 "R1" V 5543 3650 50  0000 C CNN
-F 1 "0R" V 5634 3650 50  0000 C CNN
+F 1 "200R" V 5634 3650 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 5680 3650 50  0001 C CNN
 F 3 "~" H 5750 3650 50  0001 C CNN
 	1    5750 3650
@@ -211,14 +209,14 @@ Wire Wire Line
 Wire Wire Line
 	3550 3650 3550 3800
 $Comp
-L Device:C C3
+L Device:CP C3
 U 1 1 5F8576FF
-P 7250 3950
-F 0 "C3" H 7365 3996 50  0000 L CNN
-F 1 "100uF" H 7365 3905 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 7288 3800 50  0001 C CNN
-F 3 "~" H 7250 3950 50  0001 C CNN
-	1    7250 3950
+P 7150 3950
+F 0 "C3" H 7265 3996 50  0000 L CNN
+F 1 "220uF 50V" H 7265 3905 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 7188 3800 50  0001 C CNN
+F 3 "~" H 7150 3950 50  0001 C CNN
+	1    7150 3950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -235,18 +233,6 @@ $EndComp
 Wire Wire Line
 	6100 3650 6750 3650
 Connection ~ 6100 3650
-Wire Wire Line
-	7050 3650 7250 3650
-Wire Wire Line
-	7250 3800 7250 3650
-Connection ~ 7250 3650
-Wire Wire Line
-	7250 3650 8450 3650
-Wire Wire Line
-	7250 4100 7250 4250
-Wire Wire Line
-	7250 4250 6100 4250
-Connection ~ 7250 4250
 Connection ~ 6100 4250
 Wire Notes Line
 	6600 3100 6600 4550
@@ -273,4 +259,18 @@ Connection ~ 3550 4250
 Wire Wire Line
 	3250 3650 3550 3650
 Connection ~ 3550 3650
+Wire Wire Line
+	7050 3650 7150 3650
+Wire Wire Line
+	6100 4250 7150 4250
+Wire Wire Line
+	7150 3800 7150 3650
+Connection ~ 7150 3650
+Wire Wire Line
+	7150 3650 8450 3650
+Wire Wire Line
+	7150 4100 7150 4250
+Connection ~ 7150 4250
+Wire Wire Line
+	7150 4250 8450 4250
 $EndSCHEMATC
