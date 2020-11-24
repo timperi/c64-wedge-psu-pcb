@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "C64 Wedge PSU PCB"
 Date "2020-11-02"
-Rev "1.0"
+Rev "1.1"
 Comp "Timo Mömmö"
 Comment1 ""
 Comment2 ""
@@ -31,12 +31,12 @@ $EndComp
 $Comp
 L Device:L L1
 U 1 1 5F7EB0E4
-P 5750 3850
-F 0 "L1" V 5662 3850 50  0000 C CNN
-F 1 "150uH" V 5571 3850 50  0000 C CNN
-F 2 "Inductor_THT:L_Toroid_Vertical_L24.6mm_W15.5mm_P11.44mm_Pulse_KM-4" H 5750 3850 50  0001 C CNN
-F 3 "~" H 5750 3850 50  0001 C CNN
-	1    5750 3850
+P 5550 3850
+F 0 "L1" V 5462 3850 50  0000 C CNN
+F 1 "150uH" V 5371 3850 50  0000 C CNN
+F 2 "Inductor_THT:L_Toroid_Vertical_L24.6mm_W15.5mm_P11.44mm_Pulse_KM-4" H 5550 3850 50  0001 C CNN
+F 3 "~" H 5550 3850 50  0001 C CNN
+	1    5550 3850
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -44,7 +44,7 @@ L Device:D_Schottky D2
 U 1 1 5F7EC7EB
 P 5100 4100
 F 0 "D2" V 5054 4179 50  0000 L CNN
-F 1 "550mV 5A" V 5145 4179 50  0000 L CNN
+F 1 "5A" V 5145 4179 50  0000 L CNN
 F 2 "Diode_THT:D_DO-201AD_P12.70mm_Horizontal" H 5100 4100 50  0001 C CNN
 F 3 "~" H 5100 4100 50  0001 C CNN
 	1    5100 4100
@@ -53,18 +53,14 @@ $EndComp
 $Comp
 L Device:CP C2
 U 1 1 5F7ED9FD
-P 6100 4000
-F 0 "C2" H 6218 4046 50  0000 L CNN
-F 1 "2200uF" H 6218 3955 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 6138 3850 50  0001 C CNN
-F 3 "~" H 6100 4000 50  0001 C CNN
-	1    6100 4000
+P 5850 4100
+F 0 "C2" H 5968 4146 50  0000 L CNN
+F 1 "2200uF" H 5968 4055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 5888 3950 50  0001 C CNN
+F 3 "~" H 5850 4100 50  0001 C CNN
+	1    5850 4100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6100 3650 6100 3850
-Wire Wire Line
-	6100 4150 6100 4250
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5F80007A
@@ -127,8 +123,8 @@ L Device:R R2
 U 1 1 5F7F5E49
 P 8250 4000
 F 0 "R2" V 8457 4000 50  0000 C CNN
-F 1 "200R" V 8366 4000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8180 4000 50  0001 C CNN
+F 1 "120R" V 8366 4000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8180 4000 50  0001 C CNN
 F 3 "~" H 8250 4000 50  0001 C CNN
 	1    8250 4000
 	0    1    -1   0   
@@ -161,13 +157,13 @@ Wire Wire Line
 $Comp
 L Device:R R1
 U 1 1 5F81F757
-P 5750 3650
-F 0 "R1" V 5543 3650 50  0000 C CNN
-F 1 "200R" V 5634 3650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 5680 3650 50  0001 C CNN
-F 3 "~" H 5750 3650 50  0001 C CNN
-	1    5750 3650
-	0    1    1    0   
+P 6350 3500
+F 0 "R1" H 6420 3546 50  0000 L CNN
+F 1 "200R" H 6420 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6280 3500 50  0001 C CNN
+F 3 "~" H 6350 3500 50  0001 C CNN
+	1    6350 3500
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4100 3850 4100 4250
@@ -180,18 +176,6 @@ Wire Wire Line
 	4600 4250 5100 4250
 Wire Wire Line
 	5100 3850 5100 3950
-Wire Wire Line
-	5100 3850 5600 3850
-Connection ~ 5100 3850
-Wire Wire Line
-	5100 3650 5600 3650
-Wire Wire Line
-	5900 3650 6100 3650
-Wire Wire Line
-	5900 3850 6100 3850
-Connection ~ 6100 3850
-Wire Wire Line
-	5100 4250 6100 4250
 Connection ~ 5100 4250
 $Comp
 L Device:CP C1
@@ -222,26 +206,18 @@ $EndComp
 $Comp
 L Device:L L2
 U 1 1 5F85825E
-P 6900 3650
-F 0 "L2" V 7090 3650 50  0000 C CNN
-F 1 "20uH" V 6999 3650 50  0000 C CNN
-F 2 "Inductor_THT:L_Toroid_Vertical_L16.0mm_W8.0mm_P7.62mm" H 6900 3650 50  0001 C CNN
-F 3 "~" H 6900 3650 50  0001 C CNN
-	1    6900 3650
+P 7000 3650
+F 0 "L2" V 7190 3650 50  0000 C CNN
+F 1 "22uH" V 7099 3650 50  0000 C CNN
+F 2 "Inductor_THT:L_Toroid_Vertical_L16.0mm_W8.0mm_P7.62mm" H 7000 3650 50  0001 C CNN
+F 3 "~" H 7000 3650 50  0001 C CNN
+	1    7000 3650
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	6100 3650 6750 3650
-Connection ~ 6100 3650
-Connection ~ 6100 4250
 Wire Notes Line
-	6600 3100 6600 4550
-Wire Notes Line
-	6600 4550 7700 4550
+	6750 3100 6750 4550
 Wire Notes Line
 	7700 4550 7700 3100
-Wire Notes Line
-	7700 3100 6600 3100
 Text Notes 6800 3200 0    50   ~ 0
 Output ripple filter
 Text Label 8450 3650 0    50   ~ 0
@@ -260,10 +236,6 @@ Wire Wire Line
 	3250 3650 3550 3650
 Connection ~ 3550 3650
 Wire Wire Line
-	7050 3650 7150 3650
-Wire Wire Line
-	6100 4250 7150 4250
-Wire Wire Line
 	7150 3800 7150 3650
 Connection ~ 7150 3650
 Wire Wire Line
@@ -273,4 +245,48 @@ Wire Wire Line
 Connection ~ 7150 4250
 Wire Wire Line
 	7150 4250 8450 4250
+Wire Wire Line
+	5100 4250 5850 4250
+Connection ~ 5850 4250
+Wire Wire Line
+	5100 3850 5400 3850
+Connection ~ 5100 3850
+Wire Wire Line
+	5700 3850 5850 3850
+Wire Wire Line
+	5850 3850 5850 3950
+$Comp
+L Device:R R3
+U 1 1 5FBCC66C
+P 6350 3800
+F 0 "R3" H 6280 3754 50  0000 R CNN
+F 1 "4700R" H 6280 3845 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6280 3800 50  0001 C CNN
+F 3 "~" H 6350 3800 50  0001 C CNN
+	1    6350 3800
+	-1   0    0    1   
+$EndComp
+Wire Notes Line
+	6750 3100 7700 3100
+Wire Notes Line
+	6750 4550 7700 4550
+Wire Wire Line
+	6350 3650 6850 3650
+Connection ~ 6350 3650
+Wire Wire Line
+	5850 3850 5850 3650
+Wire Wire Line
+	5850 3650 6350 3650
+Wire Wire Line
+	5850 4250 6350 4250
+Connection ~ 5850 3850
+Wire Wire Line
+	6350 3950 6350 4250
+Connection ~ 6350 4250
+Wire Wire Line
+	6350 4250 7150 4250
+Wire Wire Line
+	6350 3350 5100 3350
+Wire Wire Line
+	5100 3350 5100 3650
 $EndSCHEMATC
