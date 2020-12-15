@@ -1,9 +1,15 @@
 # c64-wedge-psu-pcb
+<img src="images/pcb-pics/2020-12-13-15.00.52.jpg" alt="PSU" width="25%" align="right">
+
 A replacement PCB for the C64 Wedge PSU
 
 This PCB is a direct replacement for the PCB in the "wedge" shaped C64 PSU.
 The old linear regulator, which often fails causing overvoltage, is replaced with a modern switching regulator.
 All components are through-hole.
+
+I measured the ripple voltage with this design, using a regular C64 as a load.
+The average ripple voltage for this setup was below 10mV peak to peak.
+I was using 20MHz bandwith filtering and High-resolution mode in the scope while measuring. Measuring point was at the output pads, using a very short ground lead.
 
 The switching regulator used in this design is LM2576T-5.
 
@@ -16,7 +22,10 @@ When this reaches the C64, it has dropped very close to 5 volts.
 I have not used the LM2576-ADJ regulator, which is designed to be an adjustable output device. The reason for this decision are:
 * Keep this design simple
 * I already had LM2576T-5 regulators
-* I checked from the manufacturer that it is acceptable to boost the voltage by 0.2V using a voltage divider in the feedback line
+* I asked in the TI technical support forum that it is acceptable to boost the voltage by 0.2V using a voltage divider in the feedback line
+
+<img src="images/pcb-pics/2020-12-14-14.37.jpg" alt="PSU" width="25%" align="right">
+<img src="images/pcb-pics/2020-12-14-14.36.jpg" alt="PSU" width="25%" align="right">
 
 You can skip the voltage boosting by leaving out R1 & R3, and shorting the R1 pads with a wire.
 
