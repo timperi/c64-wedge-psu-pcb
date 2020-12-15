@@ -7,10 +7,6 @@ This PCB is a direct replacement for the PCB in the "wedge" shaped C64 PSU.
 The old linear regulator, which often fails causing overvoltage, is replaced with a modern switching regulator.
 All components are through-hole.
 
-I measured the ripple voltage with this design, using a regular C64 as a load.
-The average ripple voltage for this setup was below 10mV peak to peak.
-I was using 20MHz bandwith filtering and High-resolution mode in the scope while measuring. Measuring point was at the output pads, using a very short ground lead.
-
 The switching regulator used in this design is LM2576T-5.
 
 It has a fixed output voltage of 5 volts, but I am slightly boosting the output, because the voltage drops under load, and there is also voltage drop in the cable.
@@ -33,3 +29,14 @@ There is also an optional place for a power indicator led (LED1), and a resistor
 
 I have included a second stage output ripple filter, which greatly reduces ripple, but if you choose so, it can also be left out by omitting L2 and C3, and shorting the pads of L2.
 All of the components I've used are rated for at least 3A, so please use at least 0.5mm wire to short the L2 pads in order to stay within specs. I am not sure about the wire thickness, but 0.5mm is definitely more than enough.
+
+I measured the ripple voltage with this design, using a regular C64 as a load.
+The average ripple voltage for this setup was below 10mV peak to peak.
+I was using 20MHz bandwith filtering and High-resolution mode in the scope while measuring. Measuring point was at the output pads, using a very short ground lead.
+
+<br clear="all">
+
+I also measured the same PSU (for comparison) with the common UBEC-modification. The results can be seen below.
+
+<img src="images/measurements/LM2576-5mV-100us.png" alt="LM2576-ripple" width="40%" /> <img src="images/measurements/UBEC-5mV-100us.png" alt="UBEC-ripple" width="40%" />
+
