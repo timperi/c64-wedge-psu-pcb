@@ -18,7 +18,7 @@ When this reaches the C64, it has dropped very close to 5 volts.
 I have not used the LM2576-ADJ regulator, which is designed to be an adjustable output device. The reason for this decision are:
 * Keep this design simple
 * I already had LM2576T-5 regulators
-* I asked in the TI technical support forum that it is acceptable to boost the voltage by 0.2V using a voltage divider in the feedback line
+* I asked in the TI technical support forum if it is acceptable to boost the voltage by 0.2V using a voltage divider in the feedback line, and they answered yes it's okay.
 
 <img src="images/pcb-pics/2020-12-14-14.37.jpg" alt="PSU" width="25%" align="right">
 <img src="images/pcb-pics/2020-12-14-14.36.jpg" alt="PSU" width="25%" align="right">
