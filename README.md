@@ -38,5 +38,8 @@ I was using 20MHz bandwith filtering and High-resolution mode in the scope while
 
 I also measured the same PSU (for comparison) with the common UBEC-modification. The results can be seen below.
 
-<img src="images/measurements/LM2576-5mV-100us.png" alt="LM2576-ripple" width="40%" /> <img src="images/measurements/UBEC-5mV-100us.png" alt="UBEC-ripple" width="40%" />
+| LM2576        | UBEC          |
+| ------------- | ------------- |
+| <img src="images/measurements/LM2576-5mV-100us.png" alt="LM2576-ripple" width="100%" />  | <img src="images/measurements/UBEC-5mV-100us.png" alt="UBEC-ripple" width="100%" />  |
+ 
 
