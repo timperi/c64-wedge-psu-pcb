@@ -31,7 +31,7 @@ I have included a second stage output ripple filter, which greatly reduces rippl
 All of the components I've used are rated for at least 3A, so please use at least 0.5mm wire to short the L2 pads in order to stay within specs. I am not sure about the wire thickness, but 0.5mm is definitely more than enough.
 
 I measured the ripple voltage with this design, using a regular C64 as a load.
-The average ripple voltage for this setup was below 10mV peak to peak.
+The average ripple voltage for this setup was around 10mV peak to peak.
 I was using 20MHz bandwith filtering and High-resolution mode in the scope while measuring. Measuring point was at the output pads, using a very short ground lead.
 
 <br clear="all">
