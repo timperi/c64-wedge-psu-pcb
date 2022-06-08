@@ -28,11 +28,10 @@ You can skip the voltage boosting by leaving out R1 & R3, and shorting the R1 pa
 There is also an optional place for a power indicator led (LED1), and a resistor (R2) for it. They can be skipped by just leaving them out.
 
 I have included a second stage output ripple filter, which greatly reduces ripple, but if you choose so, it can also be left out by omitting L2 and C3, and shorting the pads of L2.
-All of the components I've used are rated for at least 3A, so please use at least 0.5mm wire to short the L2 pads in order to stay within specs. I am not sure about the wire thickness, but 0.5mm is definitely more than enough.
 
 I measured the ripple voltage with this design, using a regular C64 as a load.
 The average ripple voltage for this setup was around 10mV peak to peak.
-I was using 20MHz bandwith filtering and High-resolution mode in the scope while measuring. Measuring point was at the output pads, using a very short ground lead.
+I was using 20MHz bandwith filtering and Peak-triggering in the scope while measuring. Measuring point was at the output pads, using a very short ground lead.
 
 <br clear="all">
 
