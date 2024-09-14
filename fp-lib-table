@@ -1,2 +1,4 @@
 (fp_lib_table
+  (version 7)
+  (lib (name "c64-wedge-psu-pcb")(type "KiCad")(uri "C:/Code/KiCAD/c64-wedge-psu-pcb.pretty")(options "")(descr ""))
 )
