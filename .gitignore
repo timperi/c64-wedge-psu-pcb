@@ -24,3 +24,9 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+# Project backups
+c64-wedge-psu-pcb-backups/
+
+# Lock files
+~*.lck
