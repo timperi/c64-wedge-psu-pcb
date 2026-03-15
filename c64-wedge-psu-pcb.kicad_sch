@@ -2233,7 +2233,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Adjustable Output Voltage, 3A SIMPLE SWITCHER® Step-Down Voltage Regulator, TO-220-5"
+		(property "Description" "LM2576T-ADJ"
 			(at 116.84 95.25 0)
 			(effects
 				(font
@@ -2301,7 +2301,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/DATASHEET_P596"
 			(at 133.35 97.79 0)
 			(effects
 				(font
@@ -2310,7 +2310,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Pulse PE-92108KNL (100µH, KM-4)"
 			(at 133.35 97.79 0)
 			(effects
 				(font
@@ -2380,7 +2380,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SB540-E3/54"
 			(at 129.54 104.14 0)
 			(effects
 				(font
@@ -2449,7 +2449,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "UPW1E222MHD"
 			(at 153.67 102.87 0)
 			(effects
 				(font
@@ -2913,7 +2913,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Bridge: band to +"
+		(property "Description" "SB540-E3/54"
 			(at 68.58 88.9 0)
 			(effects
 				(font
@@ -2981,7 +2981,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Bridge: band to +"
+		(property "Description" "SB540-E3/54"
 			(at 68.58 96.52 0)
 			(effects
 				(font
@@ -3049,7 +3049,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Bridge: band to -"
+		(property "Description" "SB540-E3/54"
 			(at 60.96 88.9 0)
 			(effects
 				(font
@@ -3117,7 +3117,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Bridge: band to -"
+		(property "Description" "SB540-E3/54"
 			(at 60.96 96.52 0)
 			(effects
 				(font
@@ -3256,7 +3256,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "UHE1E472MHD"
 			(at 92.71 100.33 0)
 			(effects
 				(font
@@ -3326,7 +3326,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "UHE1E221MPD"
 			(at 199.39 100.33 0)
 			(effects
 				(font
@@ -3367,7 +3367,7 @@
 				)
 			)
 		)
-		(property "Value" "20uH"
+		(property "Value" "22uH"
 			(at 177.8 90.1954 90)
 			(effects
 				(font
@@ -3384,7 +3384,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.bourns.com/docs/product-datasheets/6100.pdf"
 			(at 177.8 92.71 0)
 			(effects
 				(font
@@ -3393,7 +3393,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Bourns 6100-220K-RC (22µH, 4.52A)"
 			(at 177.8 92.71 0)
 			(effects
 				(font

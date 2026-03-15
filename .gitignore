@@ -21,10 +21,6 @@ fp-info-cache
 *.dsn
 *.ses
 
-# Exported BOM files
-*.xml
-*.csv
-
 # Project backups
 c64-wedge-psu-pcb-backups/
 
