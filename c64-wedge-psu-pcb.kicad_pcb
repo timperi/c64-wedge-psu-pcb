@@ -1321,7 +1321,7 @@
 				)
 			)
 		)
-		(property "Description" "Bridge: band to +"
+		(property "Description" "SB540-E3/54"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1633,7 +1633,7 @@
 		(descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.0*1.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
 		(tags "C Disc series Radial pin pitch 2.50mm  diameter 3.0mm width 1.6mm Capacitor")
 		(property "Reference" "C6"
-			(at 4.826 0 360)
+			(at 4.826 0 0)
 			(layer "F.SilkS")
 			(uuid "b6041aa0-1692-4e76-a3f9-43aa8664854c")
 			(effects
@@ -1848,7 +1848,7 @@
 		(descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.0*1.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
 		(tags "C Disc series Radial pin pitch 2.50mm  diameter 3.0mm width 1.6mm Capacitor")
 		(property "Reference" "C5"
-			(at 1.23 -2.159 360)
+			(at 1.23 -2.159 0)
 			(layer "F.SilkS")
 			(uuid "1ef28f7e-37a9-4433-9965-044b9d0d0259")
 			(effects
@@ -1859,7 +1859,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 1.25 2.05 360)
+			(at 1.25 2.05 0)
 			(layer "F.Fab")
 			(uuid "18442cac-55ff-4412-867d-92826ecaf6de")
 			(effects
@@ -2014,7 +2014,7 @@
 			(uuid "00ec2e7f-cb3b-4641-ac4b-a1a98e1c8cdc")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 360)
+			(at 1.25 0 0)
 			(layer "F.Fab")
 			(uuid "1456549c-6f02-4a96-870a-1c9ac774f50a")
 			(effects
@@ -2325,7 +2325,7 @@
 				)
 			)
 		)
-		(property "Description" "Bridge: band to -"
+		(property "Description" "SB540-E3/54"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2684,7 +2684,7 @@
 				)
 			)
 		)
-		(property "Description" "Low ESR, FR quality"
+		(property "Description" "UHE1E221MPD"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4945,7 +4945,7 @@
 				)
 			)
 		)
-		(property "Description" "Low ESR, FR quality"
+		(property "Description" "UHE1E472MHD"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7883,7 +7883,7 @@
 				)
 			)
 		)
-		(property "Description" "Low ESR, FR quality"
+		(property "Description" "UPW1E222MHD"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11100,7 +11100,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Adjustable Output Voltage, 3A SIMPLE SWITCHER® Step-Down Voltage Regulator, TO-220-5"
+		(property "Description" "LM2576T-ADJ"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -11777,7 +11777,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SB540-E3/54"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -12144,7 +12144,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Bridge: band to -"
+		(property "Description" "SB540-E3/54"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -12511,7 +12511,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Bridge: band to +"
+		(property "Description" "SB540-E3/54"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "B.Fab")
