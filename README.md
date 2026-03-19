@@ -1,44 +1,45 @@
 # c64-wedge-psu-pcb
 <img src="images/pcb-pics/2020-12-13-15.00.52.jpg" alt="PSU" width="25%" align="right">
 
-A replacement PCB for the C64 Wedge PSU
+A replacement PCB for the C64 Wedge PSU.
 
-This PCB is a direct replacement for the PCB in the "wedge" shaped C64 PSU.
-The old linear regulator, which often fails causing overvoltage, is replaced with a modern switching regulator.
-All components are through-hole.
+This PCB is a direct replacement for the PCB in the “wedge” shaped C64 PSU. The old linear regulator, which often fails and can cause overvoltage, is replaced with a modern switching regulator. All components are through-hole.
 
-The switching regulator used in this design is LM2576T-5.
+## Regulator and output voltage
 
-It has a fixed output voltage of 5 volts, but I am slightly boosting the output, because the voltage drops under load, and there is also voltage drop in the cable.
+The design uses **LM2576T-ADJ** with a classic feedback divider:
 
-So I have added a voltage divider to the feedback line of the LM2576 in order to boost the voltage to ~5.2V.
+| Ref | Value   | Role |
+| --- | ------- | ---- |
+| **R1** | 1 kΩ   | FB to GND |
+| **R2** | 3.2 kΩ | Regulated output (before the second-stage filter) to FB |
 
-When this reaches the C64, it has dropped very close to 5 volts.
+Nominal setpoint at the feedback node is about **5.17 V** (1.23 V × (1 + R2/R1)). That is intentionally a little above 5 V to offset load regulation, the drop across the second-stage inductor (L2 DCR), and cable loss, so the voltage at the C64 ends up closer to 5 V.
 
-I have not used the LM2576-ADJ regulator, which is designed to be an adjustable output device. The reason for this decision are:
-* Keep this design simple
-* I already had LM2576T-5 regulators
-* I asked in the TI technical support forum if it is acceptable to boost the voltage by 0.2V using a voltage divider in the feedback line, and they answered yes it's okay.
+Feedback is taken **before** the output LC filter (L2 / C3), which is a common choice for stability with an extra post filter. The voltage at the **+5VDC** pads can be slightly lower than the sensed node under heavy load because of L2 and trace resistance.
+
+To target a different output, change **R1/R2** using the LM2576-ADJ divider relationship in the datasheet (e.g. closer to 5.0 V would use a lower R2 for the same R1).
+
+## Optional parts
+
+- **Power LED:** **LED1** with **R3** (200 Ω). Omit both if you do not want an indicator.
+- **Second-stage ripple filter:** **L2** and **C3**. To omit it, leave out L2 and C3 and **short the L2 pads** (see schematic).
 
 <img src="images/pcb-pics/2020-12-14-14.37.jpg" alt="PSU" width="25%" align="right">
 <img src="images/pcb-pics/2020-12-14-14.36.jpg" alt="PSU" width="25%" align="right">
 
-You can skip the voltage boosting by leaving out R1 & R3, and shorting the R1 pads with a wire.
+## Measurements and figures *(to be updated)*
 
-There is also an optional place for a power indicator led (LED1), and a resistor (R2) for it. They can be skipped by just leaving them out.
+Ripple figures, photos, and any numeric results below are from an **earlier build / revision**. They are left here for reference until a **new unit** is assembled and measured; then this section (and the images) should be refreshed.
 
-I have included a second stage output ripple filter, which greatly reduces ripple, but if you choose so, it can also be left out by omitting L2 and C3, and shorting the pads of L2.
-
-I measured the ripple voltage with this design, using a regular C64 as a load.
-The average ripple voltage for this setup was around 10mV peak to peak.
-I was using 20MHz bandwith filtering and Peak-triggering in the scope while measuring. Measuring point was at the output pads, using a very short ground lead.
+Previously, with a regular C64 as load, output ripple at the pads was on the order of **~10 mV peak‑peak** (20 MHz bandwidth limit, peak triggering on the scope, short ground lead). The same PSU was also compared to a common UBEC-style modification; captures from that session are in the table below.
 
 <br clear="all">
 
-I also measured the same PSU (for comparison) with the common UBEC-modification. The results can be seen below.
+| LM2576 (earlier capture) | UBEC (comparison) |
+| ------------------------ | ----------------- |
+| <img src="images/measurements/LM2576-5mV-100us.png" alt="LM2576 ripple (historical)" width="100%" /> | <img src="images/measurements/UBEC-5mV-100us.png" alt="UBEC ripple (comparison)" width="100%" /> |
 
-| LM2576        | UBEC          |
-| ------------- | ------------- |
-| <img src="images/measurements/LM2576-5mV-100us.png" alt="LM2576-ripple" width="100%" />  | <img src="images/measurements/UBEC-5mV-100us.png" alt="UBEC-ripple" width="100%" />  |
- 
+---
 
+**Project:** schematic rev **2.0** (see title block in `c64-wedge-psu-pcb.kicad_sch`). BOM: `c64-wedge-psu-pcb-BOM.csv`.
