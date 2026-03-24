@@ -3512,7 +3512,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 79.7052 104.14 0)
 			(effects
 				(font
@@ -3530,7 +3530,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "K104K15X7RF5TL2"
 			(at 78.74 100.33 0)
 			(effects
 				(font
@@ -3582,7 +3582,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 143.2052 106.68 0)
 			(effects
 				(font
@@ -3600,7 +3600,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "K104K15X7RF5TL2"
 			(at 142.24 102.87 0)
 			(effects
 				(font
@@ -3652,7 +3652,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 187.6552 104.14 0)
 			(effects
 				(font
@@ -3670,7 +3670,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "K104K15X7RF5TL2"
 			(at 186.69 100.33 0)
 			(effects
 				(font

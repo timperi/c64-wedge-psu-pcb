@@ -2,7 +2,7 @@
 "C1","4700uF","Capacitor_THT:CP_Radial_D16.0mm_P7.50mm","1","UHE1E472MHD"
 "C2","2200uF","Capacitor_THT:CP_Radial_D16.0mm_P7.50mm","1","UPW1E222MHD"
 "C3","220uF","Capacitor_THT:CP_Radial_D8.0mm_P3.50mm","1","UHE1E221MPD"
-"C4,C5,C6","0.1uF","Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm","3","Unpolarized capacitor"
+"C4,C5,C6","0.1uF","Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm","3","K104K15X7RF5TL2"
 "D1,D2,D3,D4,D5","SB540","Diode_THT:D_DO-201AD_P12.70mm_Horizontal","5","SB540-E3/54"
 "H1","PAD_AC_IN_1","Connector_Wire:SolderWire-1.5sqmm_1x01_D1.7mm_OD3.9mm","1",""
 "H2","PAD_AC_IN_2","Connector_Wire:SolderWire-1.5sqmm_1x01_D1.7mm_OD3.9mm","1",""
