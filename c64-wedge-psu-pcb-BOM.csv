@@ -8,6 +8,7 @@
 "H2","PAD_AC_IN_2","Connector_Wire:SolderWire-1.5sqmm_1x01_D1.7mm_OD3.9mm","1","",""
 "H3","+5VDC","Connector_Wire:SolderWire-1.5sqmm_1x01_D1.7mm_OD3.9mm","1","",""
 "H4","GND","Connector_Wire:SolderWire-1.5sqmm_1x01_D1.7mm_OD3.9mm","1","",""
+"HS1","12.5 C/W","","1","Heatsink ATS-PCB1035 (TO-220)","Screw it on the LM2576, use thermal paste (for example Noctua NT-H1)"
 "L1","100uH","Inductor_THT:L_Toroid_Vertical_L24.6mm_W15.5mm_P11.44mm_Pulse_KM-4","1","Pulse PE-92108KNL (100µH, KM-4)",""
 "L2","22uH","c64-wedge-psu-pcb:Bourns-6100-220K-RC","1","Bourns 6100-220K-RC (22µH, 4.52A)",""
 "LED1","LED","LED_THT:LED_D3.0mm","1","",""
