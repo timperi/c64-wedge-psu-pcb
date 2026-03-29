@@ -153,7 +153,7 @@
 		(path "/00000000-0000-0000-0000-00005f80007a")
 		(sheetname "Root")
 		(sheetfile "c64-wedge-psu-pcb.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files)
 		(fp_line
 			(start -2.7 -2.45)
 			(end -2.7 2.45)
@@ -312,7 +312,7 @@
 		(path "/00000000-0000-0000-0000-00005f8026d1")
 		(sheetname "Root")
 		(sheetfile "c64-wedge-psu-pcb.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files)
 		(fp_line
 			(start -2.7 -2.45)
 			(end -2.7 2.45)
@@ -471,7 +471,7 @@
 		(path "/00000000-0000-0000-0000-00005f801467")
 		(sheetname "Root")
 		(sheetfile "c64-wedge-psu-pcb.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files)
 		(fp_line
 			(start -2.7 -2.45)
 			(end -2.7 2.45)
@@ -630,7 +630,7 @@
 		(path "/00000000-0000-0000-0000-00005f80206f")
 		(sheetname "Root")
 		(sheetfile "c64-wedge-psu-pcb.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files)
 		(fp_line
 			(start -2.7 -2.45)
 			(end -2.7 2.45)
@@ -3238,6 +3238,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Note" "1% Metal Film (1/4 W)"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "820119ac-ca20-42c2-9766-7ffe869c45a2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-00005f81f757")
 		(sheetname "Root")
@@ -3922,6 +3936,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Note" "1% Metal Film (1/4 W)"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c356cfad-ad46-42eb-aa78-3f97c8194068")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-00005fbcc66c")
 		(sheetname "Root")
@@ -4275,7 +4303,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "4700uF"
+		(property "Value" "5600uF"
 			(at 3.75 -10.25 -90)
 			(layer "B.Fab")
 			(uuid "90c2f906-741f-4eb5-bba6-c35f5ccb9f37")
@@ -4315,7 +4343,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "UHW1E472MHD"
+		(property "Description" "UHW1E562MHD"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -4324,6 +4352,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Note" "Footprint has 18mm diameter, even though the part is 16mm (to allow replacement for a bigger part)"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4c16c908-01d5-47bc-8197-f97391fa58d1")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -7519,7 +7561,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "UPW1E222MHD"
+		(property "Description" "UHW1E222MHD6"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -10844,6 +10886,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Note" "1% Metal Film (1/4 W)"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "af288dfc-645d-4650-a34a-5bcae8958d2c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-00005f7f5e49")
 		(sheetname "Root")
@@ -11743,7 +11799,7 @@
 		(descr "Diode, DO-201AD series, Axial, Horizontal, pin pitch=12.7mm, , length*diameter=9.5*5.2mm^2, , http://www.diodes.com/_files/packages/DO-201AD.pdf")
 		(tags "Diode DO-201AD series Axial Horizontal pin pitch 12.7mm  length 9.5mm diameter 5.2mm")
 		(property "Reference" "D5"
-			(at 6.35 0 360)
+			(at 6.35 0 0)
 			(layer "B.SilkS")
 			(uuid "97f62d09-4d2e-43d5-a364-7f3d1a651698")
 			(effects
@@ -11755,7 +11811,7 @@
 			)
 		)
 		(property "Value" "SB540"
-			(at 6.35 -3.72 360)
+			(at 6.35 -3.72 0)
 			(layer "B.Fab")
 			(uuid "921e2836-7d22-4346-9efd-3fe8cfb582ec")
 			(effects
@@ -12034,7 +12090,7 @@
 			(uuid "70793547-6c68-4d9f-a65f-debb532c9c79")
 		)
 		(fp_text user "K"
-			(at 0 3.048 360)
+			(at 0 3.048 0)
 			(layer "B.SilkS")
 			(uuid "27e2f173-6161-4b39-b17c-2a085a23960a")
 			(effects
@@ -12046,7 +12102,7 @@
 			)
 		)
 		(fp_text user "K"
-			(at 0 2.6 360)
+			(at 0 2.6 0)
 			(layer "B.Fab")
 			(uuid "03e081b6-841c-44a6-8704-a6fe1a0ae58b")
 			(effects
@@ -12058,7 +12114,7 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 7.0625 0 360)
+			(at 7.0625 0 0)
 			(layer "B.Fab")
 			(uuid "3f0a34f3-daac-4690-aa6f-e80521fde09a")
 			(effects

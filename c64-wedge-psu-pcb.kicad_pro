@@ -592,6 +592,12 @@
           "label": "Description",
           "name": "Description",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Note",
+          "name": "Note",
+          "show": true
         }
       ],
       "filter_string": "",

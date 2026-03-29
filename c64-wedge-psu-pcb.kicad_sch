@@ -2449,7 +2449,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "UPW1E222MHD"
+		(property "Description" "UHW1E222MHD6"
 			(at 153.67 102.87 0)
 			(effects
 				(font
@@ -2519,6 +2519,15 @@
 		)
 		(property "Description" ""
 			(at 231.14 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "1% Metal Film (1/4 W)"
+			(at 231.14 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3195,6 +3204,15 @@
 				(hide yes)
 			)
 		)
+		(property "Note" "1% Metal Film (1/4 W)"
+			(at 148.59 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d09efecc-b8c4-4f68-90a8-caefe53a0488")
 		)
@@ -3229,7 +3247,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4700uF"
+		(property "Value" "5600uF"
 			(at 96.52 100.7109 0)
 			(effects
 				(font
@@ -3256,7 +3274,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "UHW1E472MHD"
+		(property "Description" "UHW1E562MHD"
+			(at 92.71 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Footprint has 18mm diameter, even though the part is 16mm (to allow replacement for a bigger part)"
 			(at 92.71 100.33 0)
 			(effects
 				(font
@@ -3462,6 +3489,15 @@
 		)
 		(property "Description" "FB to GND (bottom); datasheet R1"
 			(at 152.4 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "1% Metal Film (1/4 W)"
+			(at 152.4 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
