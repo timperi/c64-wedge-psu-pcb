@@ -3238,7 +3238,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm"
 			(at 93.6752 104.14 0)
 			(effects
 				(font
@@ -3256,7 +3256,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "UHE1E472MHD"
+		(property "Description" "UHW1E472MHD"
 			(at 92.71 100.33 0)
 			(effects
 				(font
