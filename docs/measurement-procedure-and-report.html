@@ -110,7 +110,7 @@
   <li><strong>AC</strong> coupling, <strong>20 MHz</strong> bandwidth limit.</li>
   <li><strong>Acquire → Peak detect</strong>. <strong>20 MHz BW limit</strong> knocks down most lamp/EMI above that band; <strong>short ground</strong> and probing at the DUT reduce pickup. If Pk-Pk jumps when you move the lead or toggle a dimmer, suspect ambient, not the rail.</li>
   <li><strong>Measure → Pk-Pk</strong> on that channel.</li>
-  <li>Line ripple: <strong>1 ms/div</strong> (one full <strong>100 Hz</strong> cycle @ 50 Hz mains). Switching: <strong>5 µs/div</strong>. Open V/div until the trace uses most of the screen height.</li>
+  <li>Line ripple: <strong>2 ms/div</strong> (recorded run; ~two <strong>100 Hz</strong> cycles @ 50 Hz mains on a 10‑division display). Switching: <strong>5 µs/div</strong>. Open V/div until the trace uses most of the screen height.</li>
 </ul>
 
 </div>
@@ -131,7 +131,7 @@
 <ul>
   <li><span class="check">☐</span> Power on, electronic load off. Wait ~3 min.</li>
   <li><span class="check">☐</span> If the load still shows terminal V at ~0 A, write it in the table; else <b>N/A</b> for V.</li>
-  <li><span class="check">☐</span> Line ripple (1 ms/div) → read Pk-Pk → table.</li>
+  <li><span class="check">☐</span> Line ripple (2 ms/div) → read Pk-Pk → table.</li>
 </ul>
 <div class="save"><b>Save PNG</b> — <code>measure-scope-line-ripple-noload.png</code></div>
 <ul>
@@ -179,7 +179,7 @@
     <tr><td>2.5 A</td><td>4.84 V</td><td>16.8 mV</td><td>3.8 mV</td><td>75</td><td>Extra: after 3 A; T still falling (not plateau)</td></tr>
   </tbody>
 </table>
-<p class="small">Ambient 23 °C (sheet 1). Line = 100 Hz envelope (1 ms/div); switching ~52 kHz (5 µs/div); scope AC, 20 MHz BW, peak detect.</p>
+<p class="small">Ambient 23 °C (sheet 1). Line = 100 Hz envelope (2 ms/div); switching ~52 kHz (5 µs/div); scope AC, 20 MHz BW, peak detect.</p>
 
 </div>
 
