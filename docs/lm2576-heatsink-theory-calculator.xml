@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>OpenAI</Author>
+  <LastAuthor>OpenAI</LastAuthor>
+  <Created>2026-04-12T00:00:00Z</Created>
+  <Company></Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" ss:Size="11"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="title">
+   <Font ss:FontName="Calibri" ss:Size="14" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="header">
+   <Font ss:Bold="1"/>
+   <Interior ss:Color="#D9EAF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="input">
+   <Interior ss:Color="#FFF2CC" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="calc">
+   <Interior ss:Color="#F3F3F3" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="note">
+   <Font ss:Color="#444444"/>
+  </Style>
+  <Style ss:ID="num3">
+   <NumberFormat ss:Format="0.000"/>
+  </Style>
+  <Style ss:ID="num2">
+   <NumberFormat ss:Format="0.00"/>
+  </Style>
+  <Style ss:ID="pct2">
+   <NumberFormat ss:Format="0.00%"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="LM2576 Theory">
+  <Table>
+   <Column ss:Width="220"/>
+   <Column ss:Width="95"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="360"/>
+   <Row>
+    <Cell ss:StyleID="title" ss:MergeAcross="3"><Data ss:Type="String">LM2576 Heatsink Theory Calculator</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="note" ss:MergeAcross="3"><Data ss:Type="String">Edit yellow cells in Excel. This is a first-order theoretical model only; it does not use measured data and it will not fully capture real LM2576 losses.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="header"><Data ss:Type="String">Input / result</Data></Cell>
+    <Cell ss:StyleID="header"><Data ss:Type="String">Value</Data></Cell>
+    <Cell ss:StyleID="header"><Data ss:Type="String">Units</Data></Cell>
+    <Cell ss:StyleID="header"><Data ss:Type="String">Notes</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Transformer secondary RMS</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">V AC</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">User input</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Mains frequency</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="String">Hz</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Full-wave ripple is 2x this</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Bridge diode Vf (each)</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">0.55</Data></Cell>
+    <Cell><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Two bridge diodes conduct each half cycle</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Bulk capacitor C1</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">5600</Data></Cell>
+    <Cell><Data ss:Type="String">uF</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Current BOM default</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Regulator output setpoint</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">5.29</Data></Cell>
+    <Cell><Data ss:Type="String">V DC</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Nominal LM2576 feedback setpoint in this design</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Output current</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">A</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Try other load currents here</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Catch diode Vf (SB540)</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">0.55</Data></Cell>
+    <Cell><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">External freewheel diode drop</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LM2576 switch saturation estimate</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">1.20</Data></Cell>
+    <Cell><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">First-order conduction-loss term for internal switch</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LM2576 quiescent current estimate</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">0.005</Data></Cell>
+    <Cell><Data ss:Type="String">A</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Control / housekeeping current</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Junction-to-case thermal resistance</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">2.00</Data></Cell>
+    <Cell><Data ss:Type="String">C/W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Adjust if you want a different datasheet assumption</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Case-to-sink thermal resistance</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">0.30</Data></Cell>
+    <Cell><Data ss:Type="String">C/W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Paste / mounting interface estimate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Heatsink sink-to-air thermal resistance</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">12.50</Data></Cell>
+    <Cell><Data ss:Type="String">C/W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Current design default: ATS-PCB1035</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Ambient temperature</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">25.00</Data></Cell>
+    <Cell><Data ss:Type="String">C</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Free air assumption unless you change it</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Extra internal LM2576 loss</Data></Cell>
+    <Cell ss:StyleID="input"><Data ss:Type="Number">0.00</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Optional fudge term for switching loss or uncertainty</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="header"><Data ss:Type="String">Derived values</Data></Cell>
+    <Cell ss:StyleID="header"><Data ss:Type="String">Value</Data></Cell>
+    <Cell ss:StyleID="header"><Data ss:Type="String">Units</Data></Cell>
+    <Cell ss:StyleID="header"><Data ss:Type="String">Formula / meaning</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Rectified peak after bridge</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R4C2*SQRT(2)-2*R6C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Vac_rms*sqrt(2) - 2*Vf_bridge</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Bulk ripple helper B</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R9C2/(4*R5C2*(R7C2/1000000))"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Iout / (4 * f_mains * C1)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Duty helper M</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R19C2-R11C2+R10C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Vpk - Vswitch_sat + Vf_catch</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Duty helper A</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R8C2+R10C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Vout + Vf_catch</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Estimated duty cycle</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=IF(R20C2&lt;=0,R22C2/R21C2,IF(R21C2^2-4*R20C2*R22C2&lt;0,0,(R21C2-SQRT(R21C2^2-4*R20C2*R22C2))/(2*R20C2)))"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">ratio</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Quadratic solution with ripple-dependent Vin estimate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Estimated input current</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R23C2*R9C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">A</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Ideal buck approximation: Iin ~= D * Iout</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Bulk ripple pk-pk</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R24C2/(2*R5C2*(R7C2/1000000))"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">DeltaV ~= Iin / (2 * f_mains * C1)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Estimated average LM2576 input</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R19C2-R25C2/2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">V DC</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Peak minus half ripple</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LM2576 switch conduction loss</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R11C2*R9C2*R23C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Vswitch_sat * Iout * D</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LM2576 quiescent loss</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R26C2*R12C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Vin_avg * Iq</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LM2576 extra internal loss</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R17C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Optional manual add-on</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Total LM2576 dissipation</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=SUM(R27C2:R29C2)"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">This is the power used for temperature rise</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Catch diode loss</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R10C2*R9C2*(1-R23C2)"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">External SB540 freewheel diode</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Bridge loss</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=2*R6C2*R24C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Two bridge diodes in conduction path</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Modeled total loss (partial)</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=SUM(R30C2:R32C2)"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Excludes inductor DCR, capacitor ESR, wiring, etc.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Output power</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R8C2*R9C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Vout * Iout</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Modeled efficiency (partial)</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R34C2/(R34C2+R33C2)"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">ratio</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Useful only as a rough cross-check</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Predicted LM2576 case temperature</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R16C2+R30C2*(R14C2+R15C2)"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">C</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Ta + P_lm * (theta_cs + theta_sa)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Predicted LM2576 junction temperature</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R16C2+R30C2*(R13C2+R14C2+R15C2)"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">C</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Ta + P_lm * (theta_jc + theta_cs + theta_sa)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Predicted junction rise above ambient</Data></Cell>
+    <Cell ss:StyleID="calc" ss:Formula="=R37C2-R16C2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">C</Data></Cell>
+    <Cell ss:StyleID="note"><Data ss:Type="String">Tj - Ta</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="note" ss:MergeAcross="3"><Data ss:Type="String">Main temperature formula: Tj = Ta + P_lm * (theta_jc + theta_cs + theta_sa). Change only the yellow cells to try different heatsinks or assumptions.</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <FreezePanes/>
+   <FrozenNoSplit/>
+   <SplitHorizontal>3</SplitHorizontal>
+   <TopRowBottomPane>3</TopRowBottomPane>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>2</Number>
+     <ActiveRow>10</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
