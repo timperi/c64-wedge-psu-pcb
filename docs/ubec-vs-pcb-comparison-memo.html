@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UBEC vs wedge PCB — comparison memo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.4;
+      color: #111;
+      max-width: 190mm;
+      margin: 0 auto;
+      padding: 10mm 12mm;
+    }
+    h1 {
+      font-size: 14pt;
+      font-weight: 700;
+      margin: 0 0 10pt 0;
+    }
+    h1 .sub {
+      font-size: 10pt;
+      font-weight: 400;
+      color: #333;
+      display: block;
+      margin-top: 4pt;
+    }
+    h2 {
+      font-size: 11pt;
+      margin: 14pt 0 6pt 0;
+      page-break-after: avoid;
+    }
+    p { margin: 5pt 0; }
+    ul { margin: 4pt 0 8pt 0; padding-left: 18pt; }
+    li { margin: 0 0 5pt 0; }
+    li:last-child { margin-bottom: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6pt 0 10pt 0;
+      font-size: 9.5pt;
+      page-break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 6pt 8pt;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #eee; font-weight: 600; }
+    .meta td:first-child { width: 28%; font-weight: 600; background: #f5f5f5; }
+    .check { font-family: "Segoe UI Symbol", sans-serif; margin-right: 4pt; }
+    .small { font-size: 9pt; color: #444; }
+    code { font-size: 9pt; }
+    blockquote {
+      margin: 8pt 0 8pt 12pt;
+      padding: 8pt 12pt;
+      border-left: 3px solid #666;
+      background: #f9f9f9;
+      font-size: 9.5pt;
+      page-break-inside: avoid;
+    }
+    .fill-table tbody td { padding-top: 12pt; padding-bottom: 16pt; }
+    .sheet { page-break-after: always; }
+    .sheet:last-of-type { page-break-after: auto; }
+    @page { size: A4; margin: 12mm; }
+    @media print {
+      body { max-width: none; padding: 0; margin: 0; }
+      th, .meta td:first-child { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="sheet">
+
+<h1>UBEC vs wedge PCB — comparison memo <span class="sub">Minimal · honest · take to bench</span></h1>
+
+<p><strong>Goal:</strong> Measure the <strong>same wedge PSU</strong> twice: once <strong>UBEC-modded</strong>, then after <strong>swapping to your PCB</strong> (same transformer, harness, enclosure where practical). Report what the data shows — not which side “wins” by default.</p>
+<p class="small"><strong>Honesty:</strong> Only claim what this session supports. If results are close, say <strong>comparable under these conditions</strong>. Note <strong>PCB revision</strong> and <strong>case open vs closed</strong>.</p>
+
+<p class="small"><strong>What a UBEC is (here):</strong> RC-style <strong>small DC‑DC buck</strong> (often 5 V) on a <strong>tiny PCB</strong> — SMD IC, inductor, often <strong>heat-shrink or potting</strong>. Wedge mods feed it from the <strong>rectified DC</strong> off the original transformer. There is <strong>no TO‑220 tab</strong> and <strong>no bolt-on heatsink</strong> like your LM2576 + HS1. This memo compares <strong>electrical</strong> behaviour first (V, ripple); <strong>thermals are not symmetric</strong> between the two.</p>
+
+<h2>0 — Before you start</h2>
+<ul>
+  <li><span class="check">☐</span> <strong>Photo or sketch</strong> of probe points (same for both DUTs), e.g. +5 V / GND at C64 connector.</li>
+  <li><span class="check">☐</span> <strong>Record:</strong> date, ambient °C, mains (e.g. 230 V / 50 Hz), scope model, probe (1× / 10×), AC + 20 MHz BW + peak detect — <strong>same</strong> for both runs.</li>
+  <li><span class="check">☐</span> <strong>E-load</strong> and cabling path (e.g. harness → connector → pigtail to load).</li>
+</ul>
+<p class="small"><strong>PCB build:</strong> Note KiCad / git revision or BOM date; “current board” vs “boards when they arrive.” If Phase B uses a different PCB rev, disclose it in the results table.</p>
+
+<h2>1 — Phase A: UBEC mod (measure first)</h2>
+<p><strong>DUT:</strong> Wedge with UBEC as installed today. Minimum steps (repeat for Phase B):</p>
+<table>
+  <thead>
+    <tr><th>Step</th><th>What</th><th>How / note</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>A1</td><td>DC at load</td><td>E-load or DMM <strong>after</strong> the same cable as Phase B. No load + loaded (see A3).</td></tr>
+    <tr><td>A2</td><td>Line ripple Pk-Pk</td><td>Scope AC, 20 MHz BW, peak detect, <strong>short ground</strong>. ~<strong>2 ms/div</strong> @ 50 Hz mains. Pk-Pk on trace.</td></tr>
+    <tr><td>A3</td><td>Load points</td><td>Prefer ~<strong>1.2–1.5 A</strong> (“C64-ish”); optionally one heavier (2.5 A / 3 A). One loaded row is enough for a fair snapshot.</td></tr>
+    <tr><td>A4</td><td>HF (optional)</td><td>Only if trace is spiky / messy: zoom ~1–2 periods of dominant ripple; note timebase + Pk-Pk. Skip if A1+A2 answer your question.</td></tr>
+  </tbody>
+</table>
+<p class="small"><strong>Save PNGs</strong> with clear names, e.g. <code>ubec-line-1p5A.png</code> vs <code>pcb-line-1p5A.png</code>.</p>
+
+<h2>2 — Phase B: Your PCB (after swap)</h2>
+<ul>
+  <li>Remove UBEC; install <strong>your PCB</strong> — same transformer, harness, e-load wiring.</li>
+  <li>Repeat A1–A4 with <strong>identical</strong> scope settings and <strong>same</strong> probe points.</li>
+  <li>Note <strong>case open vs closed</strong> the <strong>same way</strong> for both phases (airflow affects UBEC module and your board).</li>
+</ul>
+<p class="small"><strong>Temperature — not a matched UBEC vs PCB contest:</strong> UBECs have <strong>no LM2576 tab</strong>; heat is in the <strong>SMD chip / inductor</strong>, often under shrink or potting — a thermocouple is <strong>awkward</strong> and brand-dependent. <strong>Skip °C on the UBEC</strong> unless you have a repeatable method (e.g. IR on exposed surface). For <strong>your PCB only</strong> (optional): bead on <strong>LM2576 tab</strong> into HS1, <strong>wires under heatsink screw</strong> (same as <code>measurement-procedure-and-report.html</code>) — documents your build, not a °C-for-°C UBEC comparison.</p>
+
+</div>
+
+<div class="sheet">
+
+<h1>UBEC vs PCB — results <span class="sub">Sheet 2 · Fill in at bench</span></h1>
+
+<h2>Session meta</h2>
+<table class="meta">
+  <tr><th>Field</th><th>UBEC run</th><th>PCB run</th></tr>
+  <tr><td>Date</td><td></td><td></td></tr>
+  <tr><td>Ambient °C</td><td></td><td></td></tr>
+  <tr><td>PCB identity</td><td>UBEC mod</td><td>(rev / git / notes)</td></tr>
+  <tr><td>Case open / closed</td><td></td><td></td></tr>
+  <tr><td>Line ripple timebase</td><td>e.g. 2 ms/div</td><td>same</td></tr>
+  <tr><td>T °C regulator (optional)</td><td>UBEC: usually <strong>skip</strong> (no tab; see sheet 1 §2)</td><td>LM2576 <strong>tab</strong> + HS1</td></tr>
+</table>
+
+<h2>Electrical</h2>
+<table class="fill-table">
+  <thead>
+    <tr>
+      <th>Condition</th>
+      <th>DUT</th>
+      <th>V @ load</th>
+      <th>Line Pk-Pk (mV)</th>
+      <th>HF Pk-Pk (mV)</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>No load (~0 A)</td><td>UBEC</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>No load (~0 A)</td><td>PCB</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>~1.5 A (C64-ish)</td><td>UBEC</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>~1.5 A</td><td>PCB</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Heavier (optional)</td><td>UBEC</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Heavier (optional)</td><td>PCB</td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<p class="small">HF column optional. Add a Phase C row on paper if you re-measure on newer PCBs later.</p>
+
+<h2>Afterword</h2>
+<p class="small">Older PCB in Phase B + new boards later → optional Phase C with same procedure, or label results “comparison at rev X.” V2.0 git tag (README) is separate from this memo.</p>
+
+<h2>One-paragraph conclusion (draft here)</h2>
+<blockquote>
+Under [open/closed] case, [ambient] °C, probing [node], with [same harness and load], the UBEC mod showed [V / line ripple] at [I], and the [PCB rev] showed […]. The difference was [small / mainly … / not significant for stock C64]. This compares <strong>these two builds</strong> only, not every UBEC or every build.
+</blockquote>
+
+</div>
+
+</body>
+</html>
