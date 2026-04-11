@@ -95,13 +95,13 @@
 <table class="meta">
   <tr><td>Date</td><td class="line"></td></tr>
   <tr><td>PCB rev</td><td class="line"></td></tr>
-  <tr><td>Ambient (°C)</td><td class="line"></td></tr>
+  <tr><td>Ambient (°C)</td><td>23 (recorded run)</td></tr>
   <tr><td>Mains</td><td class="small"><strong>230 V / 50 Hz</strong> (Finland). Full-wave rectified → <strong>100 Hz</strong> ripple on the DC bus.</td></tr>
   <tr><td>AC / transformer</td><td class="small">Regular <strong>C64 wedge PSU</strong> transformer.</td></tr>
   <tr><td>E-load</td><td class="small">AliExpress <strong>1005007115786425</strong><br><a href="https://www.aliexpress.com/item/1005007115786425.html">aliexpress.com/item/1005007115786425.html</a></td></tr>
   <tr><td>Scope model</td><td>Rigol DS1054Z</td></tr>
   <tr><td>Cabling</td><td class="small">Original <strong>C64 PSU harness</strong> to <strong>C64 power connector</strong>, then a short pair of wires from that to the e-load (+5 V / GND).</td></tr>
-  <tr><td>Thermocouple</td><td class="small">On the <strong>heatsink</strong>, <strong>opposite side from the LM2576</strong>, bead as close to bare metal as possible: small dab of <strong>thermal paste</strong>, then <strong>zip tie</strong> to hold.</td></tr>
+  <tr><td>Thermocouple</td><td class="small"><strong>Bead</strong> on the <strong>LM2576 tab</strong> (metal tab / device GND, heat path into the sink). <strong>Lead wires</strong> routed and held under the <strong>heatsink screw</strong> for strain relief — bead not under the screw head.</td></tr>
 </table>
 
 <h2>Scope defaults (ripple shots)</h2>
@@ -160,6 +160,7 @@
 </ul>
 
 <h2>Results table</h2>
+<p class="small">Recorded session · ripple units mV unless noted · V = e-load after C64 harness + pigtail</p>
 <table class="results">
   <thead>
     <tr>
@@ -172,12 +173,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td>No load</td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1.5 A</td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>Full load (3 A)</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>No load</td><td>5.36 V</td><td>4.72 mV</td><td>3.04 mV</td><td>23</td><td>—</td></tr>
+    <tr><td>1.5 A</td><td>5.03 V</td><td>11.6 mV</td><td>3.6 mV</td><td>49</td><td>—</td></tr>
+    <tr><td>3 A</td><td>4.75 V</td><td>21.2 mV</td><td>3.6 mV</td><td>86</td><td>~25 min at 3 A before readings</td></tr>
+    <tr><td>2.5 A</td><td>4.84 V</td><td>16.8 mV</td><td>3.8 mV</td><td>75</td><td>Extra: after 3 A; T still falling (not plateau)</td></tr>
   </tbody>
 </table>
-<p class="small">V = e-load @ end of cable when loaded.</p>
+<p class="small">Ambient 23 °C (sheet 1). Line = 100 Hz envelope (1 ms/div); switching ~52 kHz (5 µs/div); scope AC, 20 MHz BW, peak detect.</p>
 
 </div>
 

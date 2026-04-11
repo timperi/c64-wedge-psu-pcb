@@ -13,6 +13,6 @@
 "L2","22uH","c64-wedge-psu-pcb:Bourns-6100-220K-RC","1","Bourns 6100-220K-RC (22µH, 4.52A)",""
 "LED1","LED","LED_THT:LED_D3.0mm","1","",""
 "R1","1k","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","1","FB to GND (bottom); datasheet R1","1% Metal Film (1/4 W)"
-"R2","3.2k","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","1","Vout to FB (top); datasheet R2","1% Metal Film (1/4 W)"
-"R3","200","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","1","","1% Metal Film (1/4 W)"
+"R2","3.3k","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","1","Vout to FB (top); datasheet R2","1% Metal Film (1/4 W)"
+"R3","220","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","1","","1% Metal Film (1/4 W)"
 "U1","LM2576T-ADJ","Package_TO_SOT_THT:TO-220-5_P3.4x3.7mm_StaggerEven_Lead3.8mm_Vertical","1","LM2576T-ADJ",""
