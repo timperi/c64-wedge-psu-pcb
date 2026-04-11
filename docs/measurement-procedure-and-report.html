@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>C64 Wedge PSU — bench checklist</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.4;
+      color: #111;
+      max-width: 190mm;
+      margin: 0 auto;
+      padding: 10mm 12mm;
+    }
+    h1 {
+      font-size: 14pt;
+      font-weight: 700;
+      margin: 0 0 10pt 0;
+    }
+    h1 .sheet-meta {
+      font-size: 11pt;
+      font-weight: 400;
+      color: #333;
+    }
+    h2 {
+      font-size: 11pt;
+      margin: 14pt 0 6pt 0;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 10.5pt;
+      margin: 10pt 0 4pt 0;
+      page-break-after: avoid;
+    }
+    p { margin: 5pt 0; }
+    ul { margin: 4pt 0 8pt 0; padding-left: 18pt; }
+    li { margin: 0 0 5pt 0; }
+    li:last-child { margin-bottom: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6pt 0 10pt 0;
+      font-size: 9.5pt;
+      page-break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 6pt 8pt;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #eee; font-weight: 600; }
+    .meta td:first-child { width: 30%; font-weight: 600; background: #f5f5f5; font-size: 9.5pt; }
+    .save {
+      background: #fff8e6;
+      border-left: 3px solid #c90;
+      padding: 5pt 10pt;
+      margin: 6pt 0 8pt 12pt;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    .check { font-family: "Segoe UI Symbol", sans-serif; margin-right: 4pt; }
+    @page {
+      size: A4;
+    }
+    @media print {
+      body {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+      }
+      .save, th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .small { font-size: 9pt; color: #444; }
+    .line { border-bottom: 1px solid #999; min-height: 18pt; margin: 0; }
+    .sheet { page-break-after: always; }
+    .sheet:last-of-type { page-break-after: auto; }
+    code { font-size: 9pt; }
+    .sheet-setup .line { min-height: 22pt; }
+    .sheet-setup h2:first-of-type { margin-top: 0; }
+    .sheet-setup .meta,
+    .sheet-setup .meta td:first-child { font-size: 10pt; }
+    .results tbody td { padding-top: 10pt; padding-bottom: 14pt; }
+  </style>
+</head>
+<body>
+
+<div class="sheet sheet-setup">
+
+<h1>C64 Wedge PSU — bench checklist <span class="sheet-meta">· Sheet 1 of 2 · Setup</span></h1>
+
+<h2>Context</h2>
+<table class="meta">
+  <tr><td>Date</td><td class="line"></td></tr>
+  <tr><td>PCB rev</td><td class="line"></td></tr>
+  <tr><td>Ambient (°C)</td><td class="line"></td></tr>
+  <tr><td>Mains</td><td class="small"><strong>230 V / 50 Hz</strong> (Finland). Full-wave rectified → <strong>100 Hz</strong> ripple on the DC bus.</td></tr>
+  <tr><td>AC / transformer</td><td class="small">Regular <strong>C64 wedge PSU</strong> transformer.</td></tr>
+  <tr><td>E-load</td><td class="small">AliExpress <strong>1005007115786425</strong><br><a href="https://www.aliexpress.com/item/1005007115786425.html">aliexpress.com/item/1005007115786425.html</a></td></tr>
+  <tr><td>Scope model</td><td>Rigol DS1054Z</td></tr>
+  <tr><td>Cabling</td><td class="small">Original <strong>C64 PSU harness</strong> to <strong>C64 power connector</strong>, then a short pair of wires from that to the e-load (+5 V / GND).</td></tr>
+  <tr><td>Thermocouple</td><td class="small">On the <strong>heatsink</strong>, <strong>opposite side from the LM2576</strong>, bead as close to bare metal as possible: small dab of <strong>thermal paste</strong>, then <strong>zip tie</strong> to hold.</td></tr>
+</table>
+
+<h2>Scope defaults (ripple shots)</h2>
+<ul>
+  <li>10× probe, <strong>short ground</strong> at measurement GND.</li>
+  <li><strong>AC</strong> coupling, <strong>20 MHz</strong> bandwidth limit.</li>
+  <li><strong>Acquire → Peak detect</strong>. <strong>20 MHz BW limit</strong> knocks down most lamp/EMI above that band; <strong>short ground</strong> and probing at the DUT reduce pickup. If Pk-Pk jumps when you move the lead or toggle a dimmer, suspect ambient, not the rail.</li>
+  <li><strong>Measure → Pk-Pk</strong> on that channel.</li>
+  <li>Line ripple: <strong>1 ms/div</strong> (one full <strong>100 Hz</strong> cycle @ 50 Hz mains). Switching: <strong>5 µs/div</strong>. Open V/div until the trace uses most of the screen height.</li>
+</ul>
+
+</div>
+
+<div class="sheet">
+
+<h1>C64 Wedge PSU — bench checklist <span class="sheet-meta">· Sheet 2 of 2 · Steps &amp; measurements</span></h1>
+
+<h2>Procedure</h2>
+
+<h3>A — Safety &amp; setup</h3>
+<ul>
+  <li><span class="check">☐</span> Safe bench (e.g. RCD), clear workspace. Probe compensation checked on cal output.</li>
+  <li><span class="check">☐</span> Ripple probe at <b>H3</b> or same node as e-load (circle one). DC <b>V</b> in the table = e-load display (after cable), not the scope.</li>
+</ul>
+
+<h3>B — No load</h3>
+<ul>
+  <li><span class="check">☐</span> Power on, electronic load off. Wait ~3 min.</li>
+  <li><span class="check">☐</span> If the load still shows terminal V at ~0 A, write it in the table; else <b>N/A</b> for V.</li>
+  <li><span class="check">☐</span> Line ripple (1 ms/div) → read Pk-Pk → table.</li>
+</ul>
+<div class="save"><b>Save PNG</b> — <code>measure-scope-line-ripple-noload.png</code></div>
+<ul>
+  <li><span class="check">☐</span> Switching ripple (5 µs/div) → Pk-Pk → table.</li>
+</ul>
+<div class="save"><b>Save PNG</b> — <code>measure-scope-switching-ripple-noload.png</code></div>
+<ul><li><span class="check">☐</span> Heatsink temperature (optional while still cool).</li></ul>
+
+<h3>C — 1.5 A</h3>
+<ul>
+  <li><span class="check">☐</span> CC load <strong>1.5 A</strong> on +5 V. Wait ~3 min (or ~10 min if heatsink was already warm).</li>
+  <li><span class="check">☐</span> E-load V, line Pk-Pk, switching Pk-Pk → table.</li>
+</ul>
+<div class="save"><b>Save PNG</b> — <code>measure-scope-line-ripple-load-1p5A.png</code> · <code>measure-scope-switching-ripple-load-1p5A.png</code></div>
+
+<h3>D — Full load</h3>
+<ul>
+  <li><span class="check">☐</span> Set <strong>3 A</strong> CC load. Wait ≥15 min on heatsink; plateau ≈ &lt;1 °C in 5 min.</li>
+  <li><span class="check">☐</span> E-load V, line Pk-Pk, switching Pk-Pk, T heatsink → table.</li>
+</ul>
+<div class="save"><b>Save PNG</b> — <code>measure-scope-line-ripple-load-3A.png</code> and <code>measure-scope-switching-ripple-load-3A.png</code></div>
+
+<h3>E — Done</h3>
+<ul>
+  <li><span class="check">☐</span> Copy PNGs off USB. Power off; discharge load safely.</li>
+</ul>
+
+<h2>Results table</h2>
+<table class="results">
+  <thead>
+    <tr>
+      <th>Condition</th>
+      <th>V @ load</th>
+      <th>Line Pk-Pk</th>
+      <th>Switching Pk-Pk</th>
+      <th>T heatsink °C</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>No load</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1.5 A</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Full load (3 A)</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<p class="small">V = e-load @ end of cable when loaded.</p>
+
+</div>
+
+</body>
+</html>

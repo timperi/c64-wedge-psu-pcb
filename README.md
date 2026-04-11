@@ -5,6 +5,10 @@ A replacement PCB for the C64 Wedge PSU.
 
 This PCB is a direct replacement for the PCB in the “wedge” shaped C64 PSU. The old linear regulator, which often fails and can cause overvoltage, is replaced with a modern switching regulator. All components are through-hole.
 
+## Before you build (pre‑V2.0)
+
+If you are considering building from this repo **before a V2.0 release is tagged** (or from older Gerbers / third‑party kits), read **[Issue #4 — thermal capability and “3 A” marking](https://github.com/timperi/c64-wedge-psu-pcb/issues/4)** first. It explains limitations of the original design (including regulator heating without a heatsink), realistic C64‑class loads, and why **V2.0** is meant to address testing and silkscreen claims. Third‑party kits may not match the BOM here; treat any build as your own responsibility.
+
 ## Regulator and output voltage
 
 The design uses **LM2576T-ADJ** with a classic feedback divider:
