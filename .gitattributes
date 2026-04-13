@@ -1,0 +1,7 @@
+# KiCad text: force LF in the repo and on checkout (avoids Windows CRLF churn).
+*.kicad_sch text eol=lf
+*.kicad_pcb text eol=lf
+*.kicad_pro text eol=lf
+*.kicad_prl text eol=lf
+*.kicad_mod text eol=lf
+*.kicad_sym text eol=lf
