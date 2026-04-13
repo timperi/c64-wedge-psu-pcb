@@ -910,7 +910,7 @@
 			(uuid "0818deca-fd91-45e1-b45a-2b094329e153")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 360)
+			(at 1.25 0 0)
 			(layer "F.Fab")
 			(uuid "08a57c89-a5c4-4df0-a451-e89339c2ecdf")
 			(effects
@@ -3058,7 +3058,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=3.50mm, , diameter=8mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 3.50mm  diameter 8mm Electrolytic Capacitor")
 		(property "Reference" "C3"
-			(at 0 2.413 360)
+			(at 0 2.413 0)
 			(layer "B.SilkS")
 			(uuid "80e98f8f-0d51-441f-9493-cae2e67ee369")
 			(effects
@@ -3070,7 +3070,7 @@
 			)
 		)
 		(property "Value" "220uF"
-			(at -1.395349 -0.127 360)
+			(at -1.395349 -0.127 0)
 			(layer "B.SilkS")
 			(uuid "e033593b-12a3-4715-9295-79d8877dff95")
 			(effects
@@ -15061,7 +15061,7 @@
 			)
 		)
 	)
-	(gr_text "V2.0 - 04/2026"
+	(gr_text "V2.1 - 04/2026"
 		(at 132.03 76.7 0)
 		(layer "F.SilkS")
 		(uuid "a9c64059-d378-4aae-91fd-73e29644cfe7")

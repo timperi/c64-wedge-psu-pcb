@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "C64 Wedge PSU PCB")
-		(date "2026-03-15")
-		(rev "2.0")
+		(date "2026-04-13")
+		(rev "2.1")
 		(company "Timo Mömmö")
 	)
 	(lib_symbols
