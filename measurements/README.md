@@ -35,21 +35,31 @@ Soak at each load step ≈ **10 min** (except **3 A** UBEC — see table note). 
 
 **Vertical scale (important):** UBEC captures were taken at **15 mV/div**; LM2576 PCB V2.0 captures at **5 mV/div**. The waveforms **look** different side‑by‑side — a given deflection on the UBEC trace represents **three times** the AC voltage of the same deflection on the LM2576 trace. Use the **Pk‑Pk numbers in the table** for a fair comparison, not the apparent trace size alone.
 
+### 1.0 A
+
 | UBEC (15 mV/div) | LM2576 PCB (5 mV/div) |
 | ---------------- | --------------------- |
 | ![](UBEC-2026-04-11/1_0A-2ms.png) | ![](PCB-V2.0/1_0A-2ms.png) |
+
+### 1.5 A
 
 | UBEC (15 mV/div) | LM2576 PCB (5 mV/div) |
 | ---------------- | --------------------- |
 | ![](UBEC-2026-04-11/1_5A-2ms.png) | ![](PCB-V2.0/1_5A-2ms.png) |
 
+### 2.0 A
+
 | UBEC (15 mV/div) | LM2576 PCB (5 mV/div) |
 | ---------------- | --------------------- |
 | ![](UBEC-2026-04-11/2_0A-2ms.png) | ![](PCB-V2.0/2_0A-2ms.png) |
 
+### 2.5 A
+
 | UBEC (15 mV/div) | LM2576 PCB (5 mV/div) |
 | ---------------- | --------------------- |
 | ![](UBEC-2026-04-11/2_5A-2ms.png) | ![](PCB-V2.0/2_5A-2ms.png) |
+
+### 3.0 A
 
 | UBEC (15 mV/div) | LM2576 PCB (5 mV/div) |
 | ---------------- | --------------------- |
