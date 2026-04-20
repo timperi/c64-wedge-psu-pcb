@@ -14981,8 +14981,8 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "- Short leg"
-		(at 168.91 76.2 0)
+	(gr_text "- Short\n  leg"
+		(at 155.448 76.962 0)
 		(layer "B.SilkS")
 		(uuid "614736a1-d291-4444-8bc6-db5ae1811ebd")
 		(effects
