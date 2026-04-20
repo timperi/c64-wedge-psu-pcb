@@ -9,11 +9,11 @@ This PCB is a direct replacement for the PCB in the “wedge” shaped C64 PSU. 
 
 The **KiCad PCB** was reworked for rev **2.0** (current silk **2.1**): **U1 (LM2576)** is placed **closer to the wedge middle wall** (the **inner** case wall along that edge of the PCB — not the outer wedge shell). That frees **vertical space** for the TO-220 **heatsink** and usually means **little or no lead forming** on the regulator compared to older layouts. Other parts were **rearranged** for clearance and assembly flow. **Silkscreen** shows **component values** (not only references) to make population easier. A **logo / graphic** is included on the board.
 
-## Before you build (pre‑V2.0)
+## Before you build
 
-**Maintainer note:** Bench comparison (UBEC vs LM2576, ripple + temperatures, scope PNGs) is in **[`measurements/README.md`](measurements/README.md)**. A formal **v2.0.0** release tag is still pending **full verification**; the fab snapshot used for a board order is tagged **v2.0.0-rc1** on the matching commit.
+**Maintainer note:** Bench comparison (UBEC vs LM2576, ripple + temperatures, scope PNGs) is in **[`measurements/README.md`](measurements/README.md)**. Tagged **`v2.0.0`** is the **V2** design: PCB layout with room for a **TO-220 heatsink** on the LM2576—the fix for the thermal limitations of builds that could not fit a proper sink. **[Issue #4 — thermal capability and “3 A” marking](https://github.com/timperi/c64-wedge-psu-pcb/issues/4)** has the background on older layouts and realistic loads.
 
-If you are considering building from this repo **before a V2.0 release is tagged** (or from older Gerbers / third‑party kits), read **[Issue #4 — thermal capability and “3 A” marking](https://github.com/timperi/c64-wedge-psu-pcb/issues/4)** first. It explains limitations of the original design (including regulator heating without a heatsink), realistic C64‑class loads, and why **V2.0** is meant to address testing and silkscreen claims. Third‑party kits may not match the BOM here; treat any build as your own responsibility.
+If you build from **older Gerbers or third‑party kits**, read Issue #4 first. Third‑party kits may not match the BOM here; treat any build as your own responsibility.
 
 ## Regulator and output voltage
 
