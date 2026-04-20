@@ -5,13 +5,13 @@ A replacement PCB for the C64 Wedge PSU.
 
 This PCB is a direct replacement for the PCB in the “wedge” shaped C64 PSU. The old linear regulator, which often fails and can cause overvoltage, is replaced with a modern switching regulator. All components are through-hole.
 
-## PCB layout (revision 2.0)
+## PCB layout (revisions 2.0 / 2.1)
 
-The **KiCad PCB** was reworked for rev **2.0**: **U1 (LM2576)** is placed **closer to the wedge middle wall** (the **inner** case wall along that edge of the PCB — not the outer wedge shell). That frees **vertical space** for the TO-220 **heatsink** and usually means **little or no lead forming** on the regulator compared to older layouts. Other parts were **rearranged** for clearance and assembly flow. **Silkscreen** shows **component values** (not only references) to make population easier. A **logo / graphic** is included on the board.
+The **KiCad PCB** was reworked for rev **2.0** (current silk **2.1**): **U1 (LM2576)** is placed **closer to the wedge middle wall** (the **inner** case wall along that edge of the PCB — not the outer wedge shell). That frees **vertical space** for the TO-220 **heatsink** and usually means **little or no lead forming** on the regulator compared to older layouts. Other parts were **rearranged** for clearance and assembly flow. **Silkscreen** shows **component values** (not only references) to make population easier. A **logo / graphic** is included on the board.
 
 ## Before you build (pre‑V2.0)
 
-**Maintainer note:** The **latest** PCB in this repository has **not** been ordered or built here yet. A **V2.0** git tag / release will be published **only after** that board is fully verified in hardware and the **final bench measurements** are repeated on that build.
+**Maintainer note:** Bench comparison (UBEC vs LM2576, ripple + temperatures, scope PNGs) is in **[`measurements/README.md`](measurements/README.md)**. A formal **v2.0.0** release tag is still pending **full verification**; the fab snapshot used for a board order is tagged **v2.0.0-rc1** on the matching commit.
 
 If you are considering building from this repo **before a V2.0 release is tagged** (or from older Gerbers / third‑party kits), read **[Issue #4 — thermal capability and “3 A” marking](https://github.com/timperi/c64-wedge-psu-pcb/issues/4)** first. It explains limitations of the original design (including regulator heating without a heatsink), realistic C64‑class loads, and why **V2.0** is meant to address testing and silkscreen claims. Third‑party kits may not match the BOM here; treat any build as your own responsibility.
 
@@ -37,22 +37,14 @@ To target a different output, change **R1/R2** using the LM2576-ADJ divider rela
 <img src="images/pcb-pics/2020-12-14-14.37.jpg" alt="PSU" width="25%" align="right">
 <img src="images/pcb-pics/2020-12-14-14.36.jpg" alt="PSU" width="25%" align="right">
 
-## Bench tests (e‑load, schematic rev 2.0 build)
+## Bench measurements
 
-**Full table, scope settings, and thermal notes** for this session live in **[`measurements/LM2576-rev2-e-load/README.md`](measurements/LM2576-rev2-e-load/README.md)**. There are **no scope PNGs** in that folder yet; a later rerun will add captures and align naming / methodology with the [UBEC session](measurements/UBEC-2026-04-11/README.md) for easier comparison. Printable checklist: [`docs/measurement-procedure-and-report.html`](docs/measurement-procedure-and-report.html). Index of all measurement pages: [`measurements/README.md`](measurements/README.md).
+UBEC vs LM2576 **ripple** (Pk‑Pk @ 2 ms/div), **temperatures**, and **side‑by‑side scope captures**: **[`measurements/README.md`](measurements/README.md)**.
 
-**Practical current guidance:** The LM2576 family is **rated** to **3 A**, and this board **can** be pushed there briefly, but **continuous 3 A is not recommended**. At **3 A** the rail was already **4.75 V** at the load (the low end of the usual C64 tolerance), and the **heatsink reached 86 °C** in **open air**. Inside a **closed wedge** with stagnant air and a warm transformer, the regulator and output voltage will be **worse**.
+**Practical current guidance:** The LM2576 family is **rated** to **3 A**, and this board **can** be pushed there briefly, but **continuous 3 A is not recommended**. In the latest bench run, at **3 A** the rail was **4.74 V** at the load and **air near the case vent** read **79 °C** with the **case open** (see comparison page). Inside a **closed wedge** with stagnant air and a warm transformer, expect worse results.
 
-For **continuous** use, treat roughly **2 A to 2.5 A** as a more realistic ceiling unless you repeat these checks in your own enclosure and wiring. A stock **C64** (often **~1.2 A** average) sits comfortably in the **~5 V** region with plenty of thermal margin when a **heatsink** is fitted as in the rev 2.0 BOM.
-
-## UBEC mod — e‑load session (2026‑04‑11)
-
-Full table, scope settings, failure note, and **all PNGs** (filenames encode load and timebase) are in **[`measurements/UBEC-2026-04-11/README.md`](measurements/UBEC-2026-04-11/README.md)**. Summary: ripple **rises strongly with load**; the sample **failed during 3 A** before a temperature plateau was recorded.
-
-## Historical captures (older build)
-
-Side‑by‑side **100 µs/div** grabs (different revision / setup): **[`measurements/historical-100us-comparison/README.md`](measurements/historical-100us-comparison/README.md)**. With a C64 as load, ripple at the pads in that older session was on the order of **~10 mV peak‑peak**.
+For **continuous** use, treat roughly **2 A to 2.5 A** as a more realistic ceiling unless you repeat these checks in your own enclosure and wiring. A stock **C64** (often **~1.2 A** average) sits comfortably in the **~5 V** region with plenty of thermal margin when a **heatsink** is fitted as in the BOM.
 
 ---
 
-**Project:** schematic and PCB rev **2.0** (title blocks in `c64-wedge-psu-pcb.kicad_sch` / `c64-wedge-psu-pcb.kicad_pcb`). BOM: `c64-wedge-psu-pcb-BOM.csv`.
+**Project:** schematic and PCB rev **2.1** (title blocks in `c64-wedge-psu-pcb.kicad_sch` / `c64-wedge-psu-pcb.kicad_pcb`). BOM: `c64-wedge-psu-pcb-BOM.csv`.
