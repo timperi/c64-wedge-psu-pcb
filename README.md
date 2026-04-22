@@ -41,9 +41,9 @@ To target a different output, change **R1/R2** using the LM2576-ADJ divider rela
 
 UBEC vs LM2576 **ripple** (Pk‑Pk @ 2 ms/div), **temperatures**, and **side‑by‑side scope captures**: **[`measurements/README.md`](measurements/README.md)**.
 
-**Practical current guidance:** The LM2576 family is **rated** to **3 A**, and this board **can** be pushed there briefly, but **continuous 3 A is not recommended**. In the latest bench run, at **3 A** the rail was **4.74 V** at the load and **air near the case vent** read **79 °C** with the **case open** (see comparison page). Inside a **closed wedge** with stagnant air and a warm transformer, expect worse results.
+**Practical current guidance:** The LM2576 family is **rated** to **3 A**, and this board **can** be pushed there briefly, but **continuous 3 A is not recommended**. In the bench comparison (**case open**), at **3 A** the rail was **4.74 V** at the load and **air near the case vent** was **79 °C** (see **measurements/README**). That does **not** apply the same way when the **case is closed**; stagnant air and a warm transformer make things **worse**, not better.
 
-For **continuous** use, treat roughly **2 A to 2.5 A** as a more realistic ceiling unless you repeat these checks in your own enclosure and wiring. A stock **C64** (often **~1.2 A** average) sits comfortably in the **~5 V** region with plenty of thermal margin when a **heatsink** is fitted as in the BOM.
+For **continuous** use in a **closed** wedge with the **BOM heatsink**, **~2 A** is a realistic working ceiling. The comparison table in **measurements/** still lists **2.5 A** and **3 A** for the **open** bench data set, not as a **continuous** target in an enclosed PSU. A stock **C64** (often **~1.2 A** average) sits comfortably in the **~5 V** region with plenty of thermal margin when a **heatsink** is fitted as in the BOM.
 
 ---
 
