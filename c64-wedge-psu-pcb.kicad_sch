@@ -113,145 +113,6 @@
 				)
 			)
 		)
-		(symbol "Connector_Generic:Conn_01x02"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x02"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x02_1_1"
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -848,6 +709,175 @@
 				)
 			)
 		)
+		(symbol "Device:LED"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -960,6 +990,262 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Diode_Bridge:KBU6B"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 2.54 6.985 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "KBU6B"
+				(at 2.54 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Diode_THT:Diode_Bridge_Vishay_KBU"
+				(at 3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/88656/kbu6.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single-Phase Bridge Rectifier, 70V Vrms, 6.0A If, KBU package"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "rectifier acdc"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Diode*Bridge*Vishay*KBU*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "KBU6B_0_1"
+				(polyline
+					(pts
+						(xy -2.54 3.81) (xy -1.27 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -2.54 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy 3.81 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 3.81 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 2.54) (xy -2.54 1.27) (xy -1.905 3.175) (xy -3.81 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -3.81 -2.54) (xy -1.905 -3.175) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 2.54 3.81) (xy 3.175 1.905) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 -1.905) (xy 1.27 -2.54) (xy 2.54 -3.81) (xy 3.175 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 0) (xy 0 -5.08) (xy 5.08 0) (xy 0 5.08) (xy -5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "KBU6B_1_1"
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1225,23 +1511,23 @@
 				)
 			)
 		)
-		(symbol "Mechanical:Heatsink"
+		(symbol "Mechanical:Heatsink_Pad_2Pin"
 			(pin_names
-				(offset 1.016)
+				(offset 0)
 			)
 			(exclude_from_sim yes)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "HS"
-				(at 0 5.08 0)
+				(at 0 5.715 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Heatsink"
-				(at 0 -1.27 0)
+			(property "Value" "Heatsink_Pad_2Pin"
+				(at 0 3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1249,7 +1535,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0.3048 0 0)
+				(at 0.3048 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1258,7 +1544,7 @@
 				)
 			)
 			(property "Datasheet" "~"
-				(at 0.3048 0 0)
+				(at 0.3048 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1266,7 +1552,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Heatsink"
+			(property "Description" "Heatsink with electrical connection, 2 pin"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1293,11 +1579,11 @@
 					(hide yes)
 				)
 			)
-			(symbol "Heatsink_0_1"
+			(symbol "Heatsink_Pad_2Pin_0_1"
 				(polyline
 					(pts
-						(xy -0.3302 1.27) (xy -0.9652 1.27) (xy -0.9652 3.81) (xy -1.6002 3.81) (xy -1.6002 1.27) (xy -2.2352 1.27)
-						(xy -2.2352 3.81) (xy -2.8702 3.81) (xy -2.8702 0) (xy -0.9652 0)
+						(xy -0.3302 0) (xy -0.9652 0) (xy -0.9652 2.54) (xy -1.6002 2.54) (xy -1.6002 0) (xy -2.2352 0)
+						(xy -2.2352 2.54) (xy -2.8702 2.54) (xy -2.8702 -1.27) (xy -0.9652 -1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1309,9 +1595,9 @@
 				)
 				(polyline
 					(pts
-						(xy -0.3302 1.27) (xy -0.3302 3.81) (xy 0.3048 3.81) (xy 0.3048 1.27) (xy 0.9398 1.27) (xy 0.9398 3.81)
-						(xy 1.5748 3.81) (xy 1.5748 1.27) (xy 2.2098 1.27) (xy 2.2098 3.81) (xy 2.8448 3.81) (xy 2.8448 0)
-						(xy -0.9652 0)
+						(xy -0.3302 0) (xy -0.3302 2.54) (xy 0.3048 2.54) (xy 0.3048 0) (xy 0.9398 0) (xy 0.9398 2.54)
+						(xy 1.5748 2.54) (xy 1.5748 0) (xy 2.2098 0) (xy 2.2098 2.54) (xy 2.8448 2.54) (xy 2.8448 -1.27)
+						(xy -0.9652 -1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1319,6 +1605,44 @@
 					)
 					(fill
 						(type background)
+					)
+				)
+			)
+			(symbol "Heatsink_Pad_2Pin_1_1"
+				(pin passive line
+					(at -2.54 -2.54 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -2.54 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -1611,6 +1935,12 @@
 		(uuid "140c450a-fc19-480a-bbf2-af4340185d52")
 	)
 	(junction
+		(at 223.52 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19735d99-00f7-4057-accc-cf737052ad71")
+	)
+	(junction
 		(at 142.24 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1659,7 +1989,7 @@
 		(uuid "687ad317-12af-4dea-83c9-528f24077c97")
 	)
 	(junction
-		(at 153.67 97.79)
+		(at 154.94 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "72fb16ee-66b7-4ce1-862a-0c71d7daccda")
@@ -1683,18 +2013,6 @@
 		(uuid "9aa5d671-9786-4a66-a5cb-117143be3338")
 	)
 	(junction
-		(at 64.77 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9d755184-738a-451e-be90-ec10f38a12ef")
-	)
-	(junction
-		(at 64.77 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a1fb21b7-e244-4d73-ae37-94d435ae8b10")
-	)
-	(junction
 		(at 92.71 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1713,28 +2031,16 @@
 		(uuid "c45cd37a-4a5e-4a96-9358-05de12b93bf8")
 	)
 	(junction
-		(at 57.15 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c51457d4-90cd-49d4-8f3e-4a54d0dc195f")
-	)
-	(junction
 		(at 236.22 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca136653-9466-4a06-9741-088eda1802c5")
 	)
 	(junction
-		(at 153.67 107.95)
+		(at 154.94 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d52ff292-59d9-47ba-a02c-47606edcb99a")
-	)
-	(junction
-		(at 72.39 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "de365278-5f37-40d6-835f-b2ca695fe969")
 	)
 	(junction
 		(at 129.54 107.95)
@@ -1766,23 +2072,43 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 88.9) (xy 72.39 92.71)
+			(xy 223.52 107.95) (xy 236.22 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "00dcd152-22fd-4e9c-b291-c7473ca3d7e1")
+		(uuid "03016721-dc28-4807-9a65-1169c2450354")
 	)
 	(wire
 		(pts
-			(xy 57.15 88.9) (xy 57.15 96.52)
+			(xy 226.06 96.52) (xy 223.52 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "00dcd152-22fd-4e9c-b291-c7473ca3d7e6")
+		(uuid "083a68bb-bdfd-4453-9b94-57a5252530ac")
+	)
+	(wire
+		(pts
+			(xy 233.68 96.52) (xy 236.22 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fae4e98-090d-428f-b472-3238761d1007")
+	)
+	(wire
+		(pts
+			(xy 46.99 111.76) (xy 64.77 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1137f172-151b-4045-96da-ae54d9b06d93")
 	)
 	(wire
 		(pts
@@ -1806,6 +2132,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 106.68) (xy 223.52 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f4e3121-90e0-41a1-9ed2-fc394498aeb4")
+	)
+	(wire
+		(pts
 			(xy 236.22 88.9) (xy 236.22 92.71)
 		)
 		(stroke
@@ -1816,7 +2152,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 97.79) (xy 168.91 97.79)
+			(xy 154.94 97.79) (xy 168.91 97.79)
 		)
 		(stroke
 			(width 0)
@@ -1846,7 +2182,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 106.68) (xy 153.67 107.95)
+			(xy 154.94 106.68) (xy 154.94 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1873,6 +2209,16 @@
 			(type default)
 		)
 		(uuid "360fc44a-eb53-4a9e-9fdf-5f310dd62c0d")
+	)
+	(wire
+		(pts
+			(xy 64.77 80.01) (xy 64.77 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c50a728-e211-4876-8213-a61164ca6e16")
 	)
 	(wire
 		(pts
@@ -1906,6 +2252,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 97.79) (xy 154.94 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4af69950-5916-427e-8f06-e62666043f97")
+	)
+	(wire
+		(pts
 			(xy 142.24 97.79) (xy 148.59 97.79)
 		)
 		(stroke
@@ -1936,17 +2292,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 97.79) (xy 153.67 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "536cbe68-b616-4c09-a78b-be89c9e60683")
-	)
-	(wire
-		(pts
-			(xy 153.67 97.79) (xy 153.67 99.06)
+			(xy 154.94 97.79) (xy 154.94 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1966,13 +2312,13 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 96.52) (xy 57.15 107.95)
+			(xy 57.15 92.71) (xy 57.15 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5cda7805-2c2e-4f06-bde9-11e908bb7750")
+		(uuid "62db6407-50f9-4312-8a27-4853ba5bbcd5")
 	)
 	(wire
 		(pts
@@ -1986,6 +2332,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 80.01) (xy 64.77 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ade91f8-8f66-4052-a378-c83cad562141")
+	)
+	(wire
+		(pts
 			(xy 92.71 92.71) (xy 104.14 92.71)
 		)
 		(stroke
@@ -1993,16 +2349,6 @@
 			(type default)
 		)
 		(uuid "6b5c1c90-60bc-48c4-b25d-62b7d6499a26")
-	)
-	(wire
-		(pts
-			(xy 72.39 92.71) (xy 72.39 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d37473e-448c-4cbf-9732-5d8d83851246")
 	)
 	(wire
 		(pts
@@ -2016,7 +2362,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 92.71) (xy 236.22 101.6)
+			(xy 236.22 92.71) (xy 236.22 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2056,17 +2402,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 80.01) (xy 64.77 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "847e73ab-c6a0-4341-8288-381c2b0690e8")
-	)
-	(wire
-		(pts
-			(xy 199.39 107.95) (xy 236.22 107.95)
+			(xy 199.39 107.95) (xy 223.52 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2083,26 +2419,6 @@
 			(type default)
 		)
 		(uuid "8e6b34f0-3781-4ae7-86e3-3581320320a5")
-	)
-	(wire
-		(pts
-			(xy 46.99 111.76) (xy 64.77 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9382d1e7-ad8a-4f67-ad6d-7ba394f11957")
-	)
-	(wire
-		(pts
-			(xy 236.22 101.6) (xy 234.95 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94e2a5d0-3269-4ecd-8a6a-f06c2b79da7e")
 	)
 	(wire
 		(pts
@@ -2123,26 +2439,6 @@
 			(type dash)
 		)
 		(uuid "99ecddef-45f0-4f3a-8c17-e1474ad2503b")
-	)
-	(wire
-		(pts
-			(xy 46.99 80.01) (xy 64.77 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a0bb53ab-9797-4e5d-9006-91e9589afd61")
-	)
-	(wire
-		(pts
-			(xy 236.22 104.14) (xy 227.33 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a4a51f56-04b7-4b62-9a7b-9db939f84e12")
 	)
 	(wire
 		(pts
@@ -2176,6 +2472,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 100.33) (xy 64.77 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6399cbb-819d-4fe5-bb5b-cfb381eeaa17")
+	)
+	(wire
+		(pts
 			(xy 142.24 106.68) (xy 142.24 107.95)
 		)
 		(stroke
@@ -2196,23 +2502,13 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 107.95) (xy 153.67 107.95)
+			(xy 223.52 96.52) (xy 223.52 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c2197d86-2b9f-4d55-9318-7ca206f331c2")
-	)
-	(wire
-		(pts
-			(xy 64.77 111.76) (xy 64.77 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c839efcf-a4a5-4ff6-acd7-acd8098bbede")
+		(uuid "c8d3593a-7781-4b24-a22d-5a826305cdf6")
 	)
 	(wire
 		(pts
@@ -2266,7 +2562,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 107.95) (xy 165.1 107.95)
+			(xy 154.94 107.95) (xy 165.1 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2316,16 +2612,6 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 107.95) (xy 236.22 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1b69e49-6d01-497b-bbb7-266a16136b4d")
-	)
-	(wire
-		(pts
 			(xy 168.91 97.79) (xy 168.91 92.71)
 		)
 		(stroke
@@ -2333,6 +2619,16 @@
 			(type default)
 		)
 		(uuid "e573aaa7-ba06-4791-a733-592e28075c4e")
+	)
+	(wire
+		(pts
+			(xy 142.24 107.95) (xy 154.94 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9a3668d-575f-4395-b3d3-a801c3f12c85")
 	)
 	(wire
 		(pts
@@ -2384,6 +2680,27 @@
 			(justify left bottom)
 		)
 		(uuid "56c40502-6c85-470f-ba87-457acd5c925d")
+	)
+	(text "VFB=1.23V"
+		(exclude_from_sim no)
+		(at 138.684 89.154 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "caf0b42b-cfa9-4b13-a5a1-0e354edde1ab")
+	)
+	(text "Divider set\nto 5.289V"
+		(exclude_from_sim no)
+		(at 150.114 94.234 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d91690c6-b055-45c6-a21b-e2d2f21c8017")
 	)
 	(label "GND"
 		(at 57.15 107.95 0)
@@ -2564,7 +2881,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00000000-0000-0000-0000-00005f7ec7eb")
-		(property "Reference" "D5"
+		(property "Reference" "D2"
 			(at 132.08 102.5524 90)
 			(effects
 				(font
@@ -2618,7 +2935,7 @@
 		(instances
 			(project "c64-wedge-psu-pcb"
 				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
-					(reference "D5")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -2626,7 +2943,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 153.67 102.87 0)
+		(at 142.24 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2634,7 +2951,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005f7ed9fd")
 		(property "Reference" "C2"
-			(at 156.6672 101.7016 0)
+			(at 145.2372 101.7016 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2643,7 +2960,7 @@
 			)
 		)
 		(property "Value" "2200uF"
-			(at 156.6672 104.013 0)
+			(at 145.2372 104.013 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2652,7 +2969,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm"
-			(at 154.6352 106.68 0)
+			(at 143.2052 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2661,7 +2978,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 153.67 102.87 0)
+			(at 142.24 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2670,7 +2987,7 @@
 			)
 		)
 		(property "Description" "UHW1E222MHD6"
-			(at 153.67 102.87 0)
+			(at 142.24 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2695,7 +3012,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 231.14 101.6 270)
+		(at 229.87 96.52 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2704,7 +3021,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005f7f5e49")
 		(property "Reference" "R3"
-			(at 231.14 96.3422 90)
+			(at 229.87 94.488 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2712,7 +3029,7 @@
 			)
 		)
 		(property "Value" "220"
-			(at 231.14 98.6536 90)
+			(at 229.87 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2720,7 +3037,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 231.14 103.378 90)
+			(at 229.87 98.298 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2729,7 +3046,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 231.14 101.6 0)
+			(at 229.87 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2738,7 +3055,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 231.14 101.6 0)
+			(at 229.87 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2747,7 +3064,7 @@
 			)
 		)
 		(property "Note" "1% Metal Film (1/4 W)"
-			(at 231.14 101.6 90)
+			(at 229.87 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2771,138 +3088,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 222.25 101.6 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005f7f7421")
-		(property "Reference" "LED1"
-			(at 224.3328 96.0882 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 224.3328 98.3996 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
-			(at 222.25 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 222.25 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 222.25 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "86209cd7-c1b4-4599-ad00-becf424a5c29")
-		)
-		(pin "1"
-			(uuid "9efe76cf-a296-4f4f-95da-9739d25ff070")
-		)
-		(instances
-			(project "c64-wedge-psu-pcb"
-				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
-					(reference "LED1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 44.45 111.76 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005f80007a")
-		(property "Reference" "H1"
-			(at 44.3738 105.7402 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PAD_AC_IN_1"
-			(at 44.3738 108.0516 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Wire:SolderWire-1.5sqmm_1x01_D1.7mm_OD3.9mm"
-			(at 44.45 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 44.45 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 44.45 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9d979367-a330-41ba-96aa-ab500d3b789f")
-		)
-		(instances
-			(project "c64-wedge-psu-pcb"
-				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
-					(reference "H1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 44.45 80.01 90)
 		(unit 1)
@@ -2910,8 +3095,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005f801467")
-		(property "Reference" "H2"
+		(uuid "00000000-0000-0000-0000-00005f80007a")
+		(property "Reference" "H1"
 			(at 44.3738 73.9902 90)
 			(effects
 				(font
@@ -2919,7 +3104,7 @@
 				)
 			)
 		)
-		(property "Value" "PAD_AC_IN_2"
+		(property "Value" "PAD_AC_IN_1"
 			(at 44.3738 76.3016 90)
 			(effects
 				(font
@@ -2947,6 +3132,70 @@
 		)
 		(property "Description" ""
 			(at 44.45 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9d979367-a330-41ba-96aa-ab500d3b789f")
+		)
+		(instances
+			(project "c64-wedge-psu-pcb"
+				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 44.45 111.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005f801467")
+		(property "Reference" "H2"
+			(at 44.3738 105.7402 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PAD_AC_IN_2"
+			(at 44.3738 108.0516 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Wire:SolderWire-1.5sqmm_1x01_D1.7mm_OD3.9mm"
+			(at 44.45 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 44.45 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3099,280 +3348,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 68.58 88.9 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "00000000-0000-0000-0000-00005f8072d1")
-		(property "Reference" "D1"
-			(at 68.8975 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SB540"
-			(at 68.8975 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-201AD_P12.70mm_Horizontal"
-			(at 68.58 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 68.58 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "SB540-E3/54"
-			(at 68.58 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8cb09326-c1e0-49fc-a517-6bcd60066931")
-		)
-		(pin "2"
-			(uuid "431e80ac-1ef8-4452-96a8-9d2eea762a21")
-		)
-		(instances
-			(project "c64-wedge-psu-pcb"
-				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 68.58 96.52 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "00000000-0000-0000-0000-00005f8072d2")
-		(property "Reference" "D2"
-			(at 68.8975 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SB540"
-			(at 68.8975 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-201AD_P12.70mm_Horizontal"
-			(at 68.58 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 68.58 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "SB540-E3/54"
-			(at 68.58 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8cb09326-c1e0-49fc-a517-6bcd60066932")
-		)
-		(pin "2"
-			(uuid "431e80ac-1ef8-4452-96a8-9d2eea762a22")
-		)
-		(instances
-			(project "c64-wedge-psu-pcb"
-				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 60.96 88.9 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "00000000-0000-0000-0000-00005f8072d3")
-		(property "Reference" "D3"
-			(at 61.2775 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SB540"
-			(at 61.2775 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-201AD_P12.70mm_Horizontal"
-			(at 60.96 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "SB540-E3/54"
-			(at 60.96 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8cb09326-c1e0-49fc-a517-6bcd60066933")
-		)
-		(pin "2"
-			(uuid "431e80ac-1ef8-4452-96a8-9d2eea762a23")
-		)
-		(instances
-			(project "c64-wedge-psu-pcb"
-				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 60.96 96.52 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "00000000-0000-0000-0000-00005f8072d4")
-		(property "Reference" "D4"
-			(at 61.2775 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SB540"
-			(at 61.2775 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-201AD_P12.70mm_Horizontal"
-			(at 60.96 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "SB540-E3/54"
-			(at 60.96 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8cb09326-c1e0-49fc-a517-6bcd60066934")
-		)
-		(pin "2"
-			(uuid "431e80ac-1ef8-4452-96a8-9d2eea762a24")
-		)
-		(instances
-			(project "c64-wedge-psu-pcb"
-				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 148.59 93.98 180)
+		(at 148.59 93.98 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3380,7 +3358,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005f81f757")
 		(property "Reference" "R2"
-			(at 150.368 92.8116 0)
+			(at 146.812 92.8116 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3389,7 +3367,7 @@
 			)
 		)
 		(property "Value" "3.3k"
-			(at 150.368 95.123 0)
+			(at 146.812 95.123 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3398,7 +3376,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 150.368 93.98 90)
+			(at 146.812 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3476,7 +3454,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm"
 			(at 93.6752 104.14 0)
 			(effects
 				(font
@@ -3674,7 +3652,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005fbcc66c")
 		(property "Reference" "R1"
-			(at 152.4 84.9122 90)
+			(at 152.4 88.138 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3682,7 +3660,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 152.4 87.2236 90)
+			(at 152.4 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3735,6 +3713,160 @@
 			(project "c64-wedge-psu-pcb"
 				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Heatsink_Pad_2Pin")
+		(at 116.84 82.55 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3fd6017e-2f0a-42e4-8de6-b4a4af3d8a20")
+		(property "Reference" "HS1"
+			(at 120.65 80.6449 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "12.5 C/W"
+			(at 120.65 83.1849 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "c64-wedge-psu-pcb:ATS-PCB1036"
+			(at 117.1448 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/advanced%20thermal%20solutions_09052018_stamped_heat_sink.pdf"
+			(at 117.1448 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Heatsink ATS-PCB1035 (TO-220)"
+			(at 116.84 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Screw it on the LM2576, use thermal paste (for example Noctua NT-H1)"
+			(at 116.84 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "148552e2-fc5d-4342-b40c-afd9ea5f2f07")
+		)
+		(pin "1"
+			(uuid "43007d4e-ef1b-45d6-a3f4-9ce3093f5e12")
+		)
+		(instances
+			(project ""
+				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
+					(reference "HS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode_Bridge:KBU6B")
+		(at 64.77 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5827bc3d-2c74-499e-b88a-cc0b8dc9a2ee")
+		(property "Reference" "D1"
+			(at 74.93 86.2898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "KBU6B"
+			(at 74.93 88.8298 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:Diode_Bridge_Vishay_KBU"
+			(at 68.58 89.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88656/kbu6.pdf"
+			(at 64.77 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single-Phase Bridge Rectifier, 70V Vrms, 6.0A If, KBU package"
+			(at 64.77 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c6aaa1eb-9698-48d4-a12f-56ccff30fd46")
+		)
+		(pin "3"
+			(uuid "035516d9-60dd-4762-8ab0-4d182fcb452e")
+		)
+		(pin "1"
+			(uuid "d8fe4862-be60-4b07-9b28-01f793544a9f")
+		)
+		(pin "4"
+			(uuid "429839a3-b856-48e4-9c00-a7256d5c35f0")
+		)
+		(instances
+			(project ""
+				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -3812,7 +3944,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 142.24 102.87 0)
+		(at 154.94 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3821,7 +3953,7 @@
 		(fields_autoplaced yes)
 		(uuid "a1000002-0000-0000-0000-000000000005")
 		(property "Reference" "C5"
-			(at 146.05 101.5999 0)
+			(at 158.75 101.5999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3830,7 +3962,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 146.05 104.1399 0)
+			(at 158.75 104.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3839,7 +3971,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
-			(at 143.2052 106.68 0)
+			(at 155.9052 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3848,7 +3980,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 142.24 102.87 0)
+			(at 154.94 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3857,7 +3989,7 @@
 			)
 		)
 		(property "Description" "K104K15X7RF5TL2"
-			(at 142.24 102.87 0)
+			(at 154.94 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3951,17 +4083,18 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:Heatsink")
-		(at 116.84 83.82 0)
+		(lib_id "Device:LED")
+		(at 223.52 102.87 270)
+		(mirror x)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "bd2b76fa-2400-4b8f-b790-9ceb1bdd30bb")
-		(property "Reference" "HS1"
-			(at 120.65 80.6449 0)
+		(uuid "d1538870-a7da-4086-9aba-61f071ef4537")
+		(property "Reference" "LED1"
+			(at 226.06 103.1874 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3969,8 +4102,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12.5 C/W"
-			(at 120.65 83.1849 0)
+		(property "Value" "LED"
+			(at 226.06 105.7274 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3978,8 +4111,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 117.1448 83.82 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm"
+			(at 223.52 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3988,7 +4121,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 117.1448 83.82 0)
+			(at 223.52 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3996,8 +4129,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Heatsink ATS-PCB1035 (TO-220)"
-			(at 116.84 83.82 0)
+		(property "Description" "Light emitting diode"
+			(at 223.52 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4005,19 +4138,16 @@
 				(hide yes)
 			)
 		)
-		(property "Note" "Screw it on the LM2576, use thermal paste (for example Noctua NT-H1)"
-			(at 116.84 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "2"
+			(uuid "fc8871e6-f389-4c52-978e-2bb4cd1da922")
+		)
+		(pin "1"
+			(uuid "6debc734-0e25-4362-af15-f74cf15bb171")
 		)
 		(instances
 			(project ""
 				(path "/25ef7e59-af8f-4cb3-8d4a-791b61806d46"
-					(reference "HS1")
+					(reference "LED1")
 					(unit 1)
 				)
 			)
