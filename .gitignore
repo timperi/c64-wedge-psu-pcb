@@ -26,3 +26,7 @@ c64-wedge-psu-pcb-backups/
 
 # Lock files
 ~*.lck
+
+# Local workspace files
+.local/
+.history/
